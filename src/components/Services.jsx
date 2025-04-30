@@ -1,0 +1,54 @@
+import React from 'react'
+
+import { LuTabletSmartphone } from "react-icons/lu";
+import { LuMonitorSmartphone } from "react-icons/lu";
+import { PiPencilRuler } from "react-icons/pi";
+
+function Services() {
+  return (
+    <div className="font-Leto h-auto flex flex-col justify-center bg-neutral-900 lg:pt-20 pt-32 lg:px-16 px-8
+    ">
+      <h1 className="text-4xl font-semibold text-white text-center pb-5">Services</h1>
+    
+      <div className='flex flex-col md:flex-row items-center justify-center md:space-x-10 space-y-6 md:space-y-0 '>
+        <div
+          className="service-card w-full md:w-1/3 h-80 rounded-[30px] shadow-inner shadow-orange-500/10 ring-2 ring-orange-200/10 cursor-pointer py-8 px-6 bg-neutral-800 flex flex-col items-center gap-3 transition-all duration-300 group hover:bg-neutral-700/50 "
+        >
+          <LuTabletSmartphone className=' text-orange-500 lg:w-20 lg:h-20 w-10 h-10'/>
+          <p className="font-semibold text-2xl  text-orange-500">
+            App Design
+          </p>
+          <p className="text-neutral-500 text-lg font-semibold text-center my-auto">
+          Responsible for creating the visual layout and user interface (UI) of an application, focusing on how users will navigate and interact with the app
+          </p>
+        </div>
+
+        <div
+          className="service-card w-full md:w-1/3 h-80 rounded-[30px] shadow-inner shadow-orange-500/10 ring-2 ring-orange-200/10  cursor-pointer py-8 px-6 bg-neutral-800 flex flex-col items-center gap-3 transition-all duration-300 group hover:bg-neutral-700/50"
+        >
+          <LuMonitorSmartphone className=' text-orange-500 lg:w-20 lg:h-20 w-10 h-10 '/>
+          <p className="font-semibold text-2xl  text-orange-500">
+            Web Design
+          </p>
+          <p className="text-neutral-500 text-lg font-semibold text-center my-auto">
+          Responsible for the visual design and layout of a website, focusing on how it looks and functions for users.
+          </p>
+        </div>
+
+        <div
+          className="service-card w-full md:w-1/3 h-80 rounded-[30px] shadow-inner shadow-orange-500/10 ring-2 ring-orange-200/10  cursor-pointer py-8 px-6 bg-neutral-800 flex flex-col items-center gap-3 transition-all duration-300 group hover:bg-neutral-700/50"
+        >
+          <PiPencilRuler className='hover:bg-neutral-700/50 text-orange-500 lg:w-20 lg:h-20 w-10 h-10 '/>
+          <p className="font-semibold text-2xl  text-orange-500 ">
+            Graphic Design
+          </p>
+          <p className="text-neutral-500 text-lg font-semibold  text-center my-auto">
+          Creative professional who uses visual elements like images, colors, and typography to communicate ideas and messages
+          </p>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default Services
