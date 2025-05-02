@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-scroll";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -50,50 +51,59 @@ function Header() {
           >
             <ul className="flex flex-col p-4 md:p-0 mt-10 border border-transparent rounded-lg bg-transparent text-center md:flex-row md:space-x-16 rtl:space-x-reverse md:mt-0 md:border-0">
               <li>
-                <a
-                  href="#"
+              <Link
                   to="hero"
-                  className="block py-3 px-3 text-gray-500 hover:text-orange-400 font-semibold text-2xl md:text-xl rounded-sm md:p-0"
-                  aria-current="page"
+                  smooth={true}
+                  duration={500}
+                  className="block py-3 px-3 text-gray-500 hover:text-orange-400 font-semibold text-2xl md:text-xl rounded-sm md:p-0 cursor-pointer"
+                  onClick={() => setIsOpen(false)}
                 >
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+              <Link
                   to="services"
-                  className="block py-3 px-3 text-gray-500 hover:text-orange-400 font-semibold text-2xl md:text-xl rounded-sm md:p-0"
+                  smooth={true}
+                  duration={500}
+                  className="block py-3 px-3 text-gray-500 hover:text-orange-400 font-semibold text-2xl md:text-xl rounded-sm md:p-0 cursor-pointer"
+                  onClick={() => setIsOpen(false)}
                 >
                   Services
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+              <Link
                   to="about"
-                  className="block py-2 px-3 text-gray-500 hover:text-orange-400 font-semibold text-2xl md:text-xl rounded-sm md:p-0"
+                  smooth={true}
+                  duration={500}
+                  className="block py-2 px-3 text-gray-500 hover:text-orange-400 font-semibold text-2xl md:text-xl rounded-sm md:p-0 cursor-pointer"
+                  onClick={() => setIsOpen(false)}
                 >
                   About Me
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+              <Link
                   to="portfolio"
-                  className="block py-3 px-3 text-gray-500 hover:text-orange-400 font-semibold text-2xl md:text-xl rounded-sm md:p-0"
+                  smooth={true}
+                  duration={500}
+                  className="block py-3 px-3 text-gray-500 hover:text-orange-400 font-semibold text-2xl md:text-xl rounded-sm md:p-0 cursor-pointer"
+                  onClick={() => setIsOpen(false)}
                 >
                   Portfolio
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+              <Link
                   to="contact"
-                  className="block py-3 px-3 text-gray-500 hover:text-orange-400 font-semibold text-2xl md:text-xl rounded-sm md:p-0"
+                  smooth={true}
+                  duration={500}
+                  className="block py-3 px-3 text-gray-500 hover:text-orange-400 font-semibold text-2xl md:text-xl rounded-sm md:p-0 cursor-pointer"
+                  onClick={() => setIsOpen(false)}
                 >
                   Contact Me
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

@@ -2,7 +2,7 @@ import React from 'react'
 
 function Contact() {
   return (
-    <div className="font-Leto h-auto flex flex-col justify-center items-center bg-neutral-900 lg:pt-20 pt-32 lg:px-20 pb-10 
+    <div className="font-Leto h-auto flex flex-col justify-center items-center bg-neutral-900 lg:pt-20 pt-16 lg:px-20 pb-10 
     " id="contact">
       <p className="text-4xl font-semibold text-white text-center pb-5">Contact Me</p>
       <p className='text-lg font-semibold text-neutral-400 text-center px-8'>Cultivating Connections: Reach Out and Connect with Me</p>

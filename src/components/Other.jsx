@@ -3,7 +3,7 @@ import { IoIosArrowForward } from "react-icons/io";
 
 function Other() {
   return (
-    <div className="font-Leto h-auto flex flex-col justify-center bg-neutral-900 lg:pt-20 pt-32 lg:px-20 pb-20 
+    <div className="font-Leto h-auto flex flex-col justify-center bg-neutral-900 lg:pt-20 pt-16 lg:px-20 pb-20 
     ">
       <h1 className="text-4xl font-semibold text-white text-center pb-5">Check Out Other Works</h1>
 
