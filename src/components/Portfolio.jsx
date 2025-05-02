@@ -15,28 +15,28 @@ function Portfolio() {
       <h1 className="text-4xl font-semibold text-white text-center pb-5">Portfolio</h1>
 
       {/* buttons lg*/}
-<div className="lg:flex md:flex items-center gap-2 bg-transparent justify-evenly  py-4 lg:px-20 px-10 pb-16 pt-6 rounded-lg hidden">
+<div className="lg:flex md:flex items-center gap-2 bg-transparent justify-evenly  py-4 lg:px-32 px-10 pb-16 pt-6 rounded-lg hidden">
 
   <button
-    className="cursor-pointer bg-neutral-800 relative inline-flex items-center justify-center gap-2  text-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-orange-500 text-gray-300 hover:text-white lg:h-12 h-10 rounded-xl lg:px-8 px-4"
+    className="cursor-pointer bg-neutral-800 relative inline-flex items-center justify-center gap-2  text-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-orange-500 text-gray-300 hover:text-white lg:h-12 h-10 rounded-xl lg:px-8 px-4 duration-500"
   >
 
     All
   </button>
   <button
-    className="cursor-pointer bg-neutral-800 relative inline-flex items-center justify-center gap-2  text-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-orange-500 text-gray-300 hover:text-white lg:h-12 h-10 rounded-xl lg:px-8 px-4"
+    className="cursor-pointer bg-neutral-800 relative inline-flex items-center justify-center gap-2  text-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-orange-500 text-gray-300 hover:text-white lg:h-12 h-10 rounded-xl lg:px-8 px-4 duration-500"
   >
 
     UI&UX
   </button>
   <button
-    className="cursor-pointer bg-neutral-800 relative inline-flex items-center justify-center gap-2 rounded-xl text-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-orange-500 text-gray-300 hover:text-white lg:h-12 h-10  lg:px-8 px-4"
+    className="cursor-pointer bg-neutral-800 relative inline-flex items-center justify-center gap-2 rounded-xl text-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-orange-500 text-gray-300 hover:text-white lg:h-12 h-10  lg:px-8 px-4  duration-500"
   >
 
     Branding Design
   </button>
   <button
-    className="cursor-pointer bg-neutral-800 relative inline-flex items-center justify-center gap-2 rounded-xl text-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-orange-500 text-gray-300 hover:text-white lg:h-12 h-10 lg:px-8 px-4"
+    className="cursor-pointer bg-neutral-800 relative inline-flex items-center justify-center gap-2 rounded-xl text-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-orange-500 text-gray-300 hover:text-white lg:h-12 h-10 lg:px-8 px-4 duration-500"
   >
 
     Graphic Design

@@ -26,7 +26,7 @@ function Contact() {
 	
 				<div className="my-2 flex flex-col items-end py-3">
 					<button className="uppercase text-sm font-bold  shadow-md shadow-orange-500/10 ring-2 ring-orange-200/10  tracking-wide bg-transparent text-neutral-500 py-3 px-10 rounded-lg w-auto 
-                      focus:outline-none focus:shadow-outline hover:bg-orange-500 hover:text-white transition duration-300 ease-in-out">
+                      focus:outline-none focus:shadow-outline hover:bg-orange-500 hover:text-white transition duration-500 ease-in-out">
             Send
           </button>
 				</div>

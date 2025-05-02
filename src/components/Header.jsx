@@ -10,7 +10,7 @@ function Header() {
 
   return (
     <>
-      <nav className="bg-neutral-900 relative font-sans lg:py-10">
+      <nav className="bg-neutral-900 relative font-sans lg:py-10 ">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-center mx-auto p-4">
           <button
             onClick={toggleMenu}
@@ -55,7 +55,7 @@ function Header() {
                   to="hero"
                   smooth={true}
                   duration={500}
-                  className="block py-3 px-3 text-gray-500 hover:text-orange-400 font-semibold text-2xl md:text-xl rounded-sm md:p-0 cursor-pointer"
+                  className="block py-3 px-3 text-gray-500 hover:text-orange-400 transition duration-500 font-semibold text-2xl md:text-xl rounded-sm md:p-0 cursor-pointer"
                   onClick={() => setIsOpen(false)}
                 >
                   Home
@@ -66,7 +66,7 @@ function Header() {
                   to="services"
                   smooth={true}
                   duration={500}
-                  className="block py-3 px-3 text-gray-500 hover:text-orange-400 font-semibold text-2xl md:text-xl rounded-sm md:p-0 cursor-pointer"
+                  className="block py-3 px-3 text-gray-500 hover:text-orange-400 transition duration-500 font-semibold text-2xl md:text-xl rounded-sm md:p-0 cursor-pointer"
                   onClick={() => setIsOpen(false)}
                 >
                   Services
@@ -77,7 +77,7 @@ function Header() {
                   to="about"
                   smooth={true}
                   duration={500}
-                  className="block py-2 px-3 text-gray-500 hover:text-orange-400 font-semibold text-2xl md:text-xl rounded-sm md:p-0 cursor-pointer"
+                  className="block py-2 px-3 text-gray-500 hover:text-orange-400 transition duration-500 font-semibold text-2xl md:text-xl rounded-sm md:p-0 cursor-pointer"
                   onClick={() => setIsOpen(false)}
                 >
                   About Me
@@ -88,7 +88,7 @@ function Header() {
                   to="portfolio"
                   smooth={true}
                   duration={500}
-                  className="block py-3 px-3 text-gray-500 hover:text-orange-400 font-semibold text-2xl md:text-xl rounded-sm md:p-0 cursor-pointer"
+                  className="block py-3 px-3 text-gray-500 hover:text-orange-400 transition duration-500 font-semibold text-2xl md:text-xl rounded-sm md:p-0 cursor-pointer"
                   onClick={() => setIsOpen(false)}
                 >
                   Portfolio
@@ -99,7 +99,7 @@ function Header() {
                   to="contact"
                   smooth={true}
                   duration={500}
-                  className="block py-3 px-3 text-gray-500 hover:text-orange-400 font-semibold text-2xl md:text-xl rounded-sm md:p-0 cursor-pointer"
+                  className="block py-3 px-3 text-gray-500 hover:text-orange-400 transition duration-500 font-semibold text-2xl md:text-xl rounded-sm md:p-0 cursor-pointer"
                   onClick={() => setIsOpen(false)}
                 >
                   Contact Me
