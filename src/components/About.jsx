@@ -4,8 +4,8 @@ function About() {
   return (
     <div className="font-Leto h-auto flex flex-col justify-center bg-neutral-900 lg:pt-20 pt-32 lg:px-20 
     " id="about">
-      <p className="text-4xl font-semibold text-white text-center pb-5">About Me</p>
-      <p className='text-lg font-semibold text-neutral-400 text-center px-6'>User Interface and User Experience and Also Graphic Designer & Freelancer</p>
+      <p className="text-4xl font-semibold text-white text-center pb-4">About Me</p>
+      <p className='text-lg font-semibold text-neutral-400 text-center px-6 pb-2'>User Interface and User Experience and Also Graphic Designer & Freelancer</p>
       <div className='flex flex-col md:flex-row items-center justify-center md:space-x-5 space-y-6 md:space-y-0 pb-10'>
         <img src="./nived2.webp" alt="" className='flex flex-col items-center gap-3 h-auto px-8  md:max-w-[400px] lg:max-w-[500px]'/>
         <div className='flex flex-col items-start gap-3'>
