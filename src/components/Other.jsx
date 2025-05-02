@@ -20,7 +20,7 @@ function Other() {
                   <div className="relative m-0 h-full overflow-hidden text-gray-700 bg-transparent rounded-none shadow-none bg-clip-border">
                       <img
                            src="./other.webp"
-                           alt="other" />
+                           alt="other" className='' />
                   </div>
                   </a>
               </div>
