@@ -19,7 +19,7 @@ function Other() {
               <a href="https://www.behance.net/nivednivuz" target="_blank" rel="noopener noreferrer" className="block">
                   <div className="relative m-0 h-full overflow-hidden text-gray-700 bg-transparent rounded-none shadow-none bg-clip-border">
                       <img
-                           src="./other.png"
+                           src="./other.webp"
                            alt="other" />
                   </div>
                   </a>

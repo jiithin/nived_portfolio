@@ -13,28 +13,28 @@ function Footer() {
         <div className="flex space-x-3 mt-4">
         <a className="bg-transparent" href="https://www.linkedin.com/in/nived-mv-0b2aa3248/">
               <img
-                src="./insta.png"
+                src="./insta.webp"
                 alt="Button 1"
                 className="w-10 h-12 object-contain"
               />
             </a>
             <a className="bg-transparent" href="https://www.linkedin.com/in/nived-mv-0b2aa3248/">
               <img
-                src="./linkedin.png"
+                src="./linkedin.webp"
                 alt="Button 1"
                 className="w-10 h-12 object-contain"
               />
             </a>
             <a className="bg-transparent" href="https://www.behance.net/nivednivuz">
               <img
-                src="./dribbble.png"
+                src="./dribbble.webp"
                 alt="Button 2"
                 className="w-10 h-12 object-contain"
               />
             </a>
             <a className="bg-transparent" href="https://www.behance.net/nivednivuz">
               <img
-                src="./behance.png"
+                src="./behance.webp"
                 alt="Button 2"
                 className="w-10 h-12 object-contain"
               />

@@ -7,7 +7,7 @@ function About() {
       <p className="text-4xl font-semibold text-white text-center pb-5">About Me</p>
       <p className='text-lg font-semibold text-neutral-400 text-center px-6'>User Interface and User Experience and Also Graphic Designer & Freelancer</p>
       <div className='flex flex-col md:flex-row items-center justify-center md:space-x-5 space-y-6 md:space-y-0 pb-10'>
-        <img src="./nived2.png" alt="" className='flex flex-col items-center gap-3 h-auto px-8  md:max-w-[400px] lg:max-w-[500px]'/>
+        <img src="./nived2.webp" alt="" className='flex flex-col items-center gap-3 h-auto px-8  md:max-w-[400px] lg:max-w-[500px]'/>
         <div className='flex flex-col items-start gap-3'>
         <p className=' lg:text-xl text-lg text-neutral-400 lg:tracking-tight md:tracking-tight align-middle leading-9 text-justify px-8'>Creative and detail-oriented Graphic Designer with over 1 years & 8 months of experience in creating visually compelling designs across various platforms. Proficient in Adobe Creative Suite (Photoshop, Illustrator, Premire Pro, After Effects & figma), with a strong understanding of typography, color theory, and design principles. Demonstrated ability to work collaboratively with cross-functional teams to deliver projects on time. Skilled in translating client needs and branding strategies into innovative and effective design solutions. Committed to staying current with industry trends and continuously improving design skills.</p>
 
@@ -45,7 +45,7 @@ function About() {
           className="text-orange-500 transition-all duration-500"
         />
       </svg>
-      <img src="./figma.png" alt="" className="absolute w-8 h-8" />
+      <img src="./figma.webp" alt="" className="absolute w-8 h-8" />
     </div>
     <p className="text-orange-500 font-bold text-lg text-center">100%</p>
     <p className="text-neutral-400 font-semibold text-xl text-center">Figma</p>
@@ -69,7 +69,7 @@ function About() {
           className="text-orange-500 transition-all duration-500"
         />
       </svg>
-      <img src="./xd.png" alt="" className="absolute w-8 h-8" />
+      <img src="./xd.webp" alt="" className="absolute w-8 h-8" />
     </div>
     <p className="text-orange-500 font-bold text-lg text-center">100%</p>
     <p className="text-neutral-400 font-semibold text-xl text-center">Adobe XD</p>
@@ -93,7 +93,7 @@ function About() {
           className="text-orange-500 transition-all duration-500"
         />
       </svg>
-      <img src="./ps.png" alt="" className="absolute w-8 h-8" />
+      <img src="./ps.webp" alt="" className="absolute w-8 h-8" />
     </div>
     <p className="text-orange-500 font-bold text-lg text-center">100%</p>
     <p className="text-neutral-400 font-semibold text-xl text-center">Photoshop</p>
@@ -115,7 +115,7 @@ function About() {
           className="text-orange-500 transition-all duration-500"
         />
       </svg>
-      <img src="./illu.png" alt="" className="absolute w-8 h-8" />
+      <img src="./illu.webp" alt="" className="absolute w-8 h-8" />
     </div>
     <p className="text-orange-500 font-bold text-lg text-center">85%</p>
     <p className="text-neutral-400 font-semibold text-xl text-center">Illustrator</p>
@@ -139,7 +139,7 @@ function About() {
           className="text-orange-500 transition-all duration-500"
         />
       </svg>
-      <img src="./pr.png" alt="" className="absolute w-8 h-8" />
+      <img src="./pr.webp" alt="" className="absolute w-8 h-8" />
     </div>
     <p className="text-orange-500 font-bold text-lg text-center">75%</p>
     <p className="text-neutral-400 font-semibold text-xl text-center">Premiere</p>
