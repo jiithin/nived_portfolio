@@ -4,9 +4,9 @@ import { MdOutlineEmail } from "react-icons/md";
 
 function Footer() {
   return (
-<footer className="bg-gradient-to-r from-neutral-800 via-neutral-800 to-neutral-800">
+<footer className="bg-gradient-to-b from-neutral-900 via-neutral-900 to-neutral-900">
   <div className="flex flex-col justify-cente items-center max-w-screen-xl px-4 mx-auto  lg:px-8">
-    <div className="flex flex-col gap-2 justify-center items-center">
+    {/* <div className="flex flex-col gap-2 justify-center items-center">
 
 
         <div className="flex mt-4 space-x-6 text-gray-500">
@@ -54,9 +54,9 @@ function Footer() {
         
         
         </div>
-    </div>
-    <div className='w-4/5 h-[1px] flex justify-center items-center bg-neutral-500'></div>
-    <p className="mt-4 lg:text-md text-sm text-neutral-500 mb-6">
+    </div> */}
+    <div className='w-4/5 h-[1px] flex justify-center items-center bg-neutral-800'></div>
+    <p className="mt-4 lg:text-md text-sm text-neutral-700 mb-6">
       Designed by Nived
     </p>
   </div>
