@@ -1,6 +1,7 @@
 import React from 'react'
 
 function About() {
+  
   return (
     <div className="font-Leto h-auto flex flex-col justify-center bg-neutral-900 lg:pt-20 pt-32 lg:px-20 
     " id="about">

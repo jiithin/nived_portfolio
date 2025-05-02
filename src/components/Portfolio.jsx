@@ -9,6 +9,8 @@ function Portfolio() {
     const handleButtonClick = (buttonName) => {
       setActiveButton(buttonName); // Set the clicked button as active
     };
+
+
   return (
     <div className="font-Leto h-auto flex flex-col justify-center bg-neutral-900 lg:pt-20 pt-32 lg:px-20 pb-20 
     " id="portfolio">

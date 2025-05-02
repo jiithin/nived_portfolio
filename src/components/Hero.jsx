@@ -34,11 +34,11 @@ function Hero() {
         
         {/* Text Section */}
         <div className="flex flex-col z-10 justify-center items-start text-left md:w-2/3 mb-24 ">
-          <p className="text-2xl font-bold text-gray-500">Hi, I am</p>
-          <p className="text-2xl text-gray-400 my-1 lg:my-2 font-bold">
+          <p className="text-2xl font-bold text-gray-500 hover:translate-x-1 hover:scale-105 transition duration-500">Hi, I am</p>
+          <p className="text-2xl text-gray-400 my-1 lg:my-2 font-bold hover:translate-x-1 hover:scale-105 transition duration-500">
             Nived MV
           </p>
-          <p className="text-5xl text-orange-500 mt-2 lg:my-4 font-bold">
+          <p className="text-5xl text-orange-500 mt-2 lg:my-4 font-bold hover:translate-x-4 hover:scale-105 transition duration-500">
             UI/UX Designer & Graphic Designer
           </p>
           {/* Buttons Section */}
