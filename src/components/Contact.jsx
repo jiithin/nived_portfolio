@@ -2,10 +2,42 @@ import React from 'react'
 
 function Contact() {
   return (
-    <div className="font-Leto h-auto flex flex-col justify-center bg-neutral-900 lg:pt-20 pt-32 lg:px-20 pb-20 
-    ">
-      <h1 className="text-4xl font-semibold text-white text-center pb-5">Contact Me (Add later)</h1>
-      </div>
+    <div className="font-Leto h-auto flex flex-col justify-center items-center bg-neutral-900 lg:pt-20 pt-32 lg:px-20 pb-10 
+    " id="contact">
+      <p className="text-4xl font-semibold text-white text-center pb-5">Contact Me</p>
+      <p className='text-lg font-semibold text-neutral-400 text-center px-8'>Cultivating Connections: Reach Out and Connect with Me</p>
+
+
+
+		<form action="" className="w-full p-8 md:px-12 lg:w-9/12 rounded-2xl">
+			<div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-2 mt-5">
+				<input className="w-full bg-neutral-800 text-neutral-300 font-semibold mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+            type="text" placeholder="Name" />
+				<input className="w-full bg-neutral-800 text-neutral-300 font-semibold mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+            type="text" placeholder="Email" />
+				<input className="w-full bg-neutral-800 text-neutral-300 font-semibold mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+            type="email" placeholder="Phone" />
+				<input className="w-full bg-neutral-800 text-neutral-300 font-semibold mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+            type="text" placeholder="Services Of Intrest" />
+            <input className="w-full h-fit py-4 bg-neutral-800 text-neutral-300 font-semibold mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+            type="text" placeholder="Timeline" />
+            <textarea placeholder="Project Details" className="w-full h-32  bg-neutral-800 text-neutral-300 font-semibold mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
+        </div>
+	
+				<div className="my-2 flex flex-col items-end py-3">
+					<button className="uppercase text-sm font-bold  shadow-md shadow-orange-500/10 ring-2 ring-orange-200/10  tracking-wide bg-transparent text-neutral-500 py-3 px-10 rounded-lg w-auto 
+                      focus:outline-none focus:shadow-outline">
+            Send
+          </button>
+				</div>
+			</form>
+
+		
+    </div>
+
+
+
+
   )
 }
 

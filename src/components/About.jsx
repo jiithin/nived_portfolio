@@ -3,13 +3,13 @@ import React from 'react'
 function About() {
   return (
     <div className="font-Leto h-auto flex flex-col justify-center bg-neutral-900 lg:pt-20 pt-32 lg:px-20 
-    ">
-      <h1 className="text-4xl font-semibold text-white text-center pb-5">About Me</h1>
-      <p className='text-lg font-semibold text-neutral-400 text-center px-8'>User Interface and User Experience and Also Graphic Designer & Freelancer</p>
+    " id="about">
+      <p className="text-4xl font-semibold text-white text-center pb-5">About Me</p>
+      <p className='text-lg font-semibold text-neutral-400 text-center px-6'>User Interface and User Experience and Also Graphic Designer & Freelancer</p>
       <div className='flex flex-col md:flex-row items-center justify-center md:space-x-5 space-y-6 md:space-y-0 pb-10'>
-        <img src="./nived2.png" alt="" className='flex flex-col items-center gap-3 h-auto px-10  md:max-w-[400px] lg:max-w-[550px]'/>
+        <img src="./nived2.png" alt="" className='flex flex-col items-center gap-3 h-auto px-8  md:max-w-[400px] lg:max-w-[500px]'/>
         <div className='flex flex-col items-start gap-3'>
-        <p className=' lg:text-xl text-lg text-neutral-400 lg:tracking-wider md:tracking-tight align-middle leading-9 text-justify px-7'>Creative and detail-oriented Graphic Designer with over 1 years & 8 months of experience in creating visually compelling designs across various platforms. Proficient in Adobe Creative Suite (Photoshop, Illustrator, Premire Pro, After Effects & figma), with a strong understanding of typography, color theory, and design principles. Demonstrated ability to work collaboratively with cross-functional teams to deliver projects on time. Skilled in translating client needs and branding strategies into innovative and effective design solutions. Committed to staying current with industry trends and continuously improving design skills.</p>
+        <p className=' lg:text-xl text-lg text-neutral-400 lg:tracking-tight md:tracking-tight align-middle leading-9 text-justify px-8'>Creative and detail-oriented Graphic Designer with over 1 years & 8 months of experience in creating visually compelling designs across various platforms. Proficient in Adobe Creative Suite (Photoshop, Illustrator, Premire Pro, After Effects & figma), with a strong understanding of typography, color theory, and design principles. Demonstrated ability to work collaboratively with cross-functional teams to deliver projects on time. Skilled in translating client needs and branding strategies into innovative and effective design solutions. Committed to staying current with industry trends and continuously improving design skills.</p>
 
         <div className="mt-6 px-8">
             <a
@@ -26,7 +26,7 @@ function About() {
       </div>
 
       {/* radial progressbar */}
-      <div className="flex flex-wrap justify-evenly gap-12 py-4 px-6">
+      <div className="flex flex-wrap justify-evenly gap-12 py-4 px-6 mt-6">
   {/* Figma */}
   <div className="flex flex-col justify-center items-center">
     <div className="relative flex items-center justify-center h-auto">

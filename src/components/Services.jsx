@@ -6,8 +6,8 @@ import { PiPencilRuler } from "react-icons/pi";
 
 function Services() {
   return (
-    <div className="font-Leto h-auto flex flex-col justify-center bg-neutral-900 lg:pt-20 pt-32 lg:px-16 px-8
-    ">
+    <div className="font-Leto h-auto flex flex-col justify-center bg-neutral-900 lg:pt-20 pt-32 lg:px-16 md:px-10 px-8
+    " id="services">
       <h1 className="text-4xl font-semibold text-white text-center pb-5">Services</h1>
     
       <div className='flex flex-col md:flex-row items-center justify-center md:space-x-10 space-y-6 md:space-y-0 '>
@@ -18,7 +18,7 @@ function Services() {
           <p className="font-semibold text-2xl  text-orange-500">
             App Design
           </p>
-          <p className="text-neutral-500 text-lg font-semibold text-center my-auto">
+          <p className="text-neutral-500 text-lg font-semibold text-center my-auto overflow-hidden">
           Responsible for creating the visual layout and user interface (UI) of an application, focusing on how users will navigate and interact with the app
           </p>
         </div>
@@ -30,7 +30,7 @@ function Services() {
           <p className="font-semibold text-2xl  text-orange-500">
             Web Design
           </p>
-          <p className="text-neutral-500 text-lg font-semibold text-center my-auto">
+          <p className="text-neutral-500 text-lg font-semibold text-center my-auto overflow-hidden">
           Responsible for the visual design and layout of a website, focusing on how it looks and functions for users.
           </p>
         </div>
@@ -42,7 +42,7 @@ function Services() {
           <p className="font-semibold text-2xl  text-orange-500 ">
             Graphic Design
           </p>
-          <p className="text-neutral-500 text-lg font-semibold  text-center my-auto">
+          <p className="text-neutral-500 text-lg font-semibold  text-center my-auto overflow-hidden">
           Creative professional who uses visual elements like images, colors, and typography to communicate ideas and messages
           </p>
         </div>
