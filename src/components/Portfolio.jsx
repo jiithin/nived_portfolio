@@ -51,13 +51,13 @@ function Portfolio() {
   <button
           type="button"
           className={`relative inline-flex items-center rounded-l-xl px-3 py-3 text-sm font-semibold ${
-            activeButton === 'All' ? 'bg-orange-500 text-white' : 'bg-neutral-700/40 text-gray-200'
+            activeButton === 'All' ? 'bg-orange-500 text-white' : 'bg-neutral-700/30 text-gray-200'
           } hover:bg-orange-500 focus:z-10`}
           onClick={() => handleButtonClick('All')}
         >All</button>
-  <button type="button" className="relative -ml-px inline-flex items-center bg-neutral-700/40 px-3 py-3 text-sm font-semibold text-gray-200  hover:bg-orange-500 focus:z-10">UI&UX</button>
-  <button type="button" className="relative -ml-px inline-flex items-center bg-neutral-700/40 px-3 py-3 text-sm font-semibold text-gray-200  hover:bg-orange-500 focus:z-10">Branding Design</button>
-  <button type="button" className="relative -ml-px inline-flex items-center rounded-r-xl bg-neutral-700/40 px-3 py-3 text-sm font-semibold text-gray-200 hover:bg-orange-500 focus:z-10">Graphic Design</button>
+  <button type="button" className="relative -ml-px inline-flex items-center bg-neutral-700/30 px-3 py-3 text-sm font-semibold text-gray-200  hover:bg-orange-500 focus:z-10">UI&UX</button>
+  <button type="button" className="relative -ml-px inline-flex items-center bg-neutral-700/30 px-3 py-3 text-sm font-semibold text-gray-200  hover:bg-orange-500 focus:z-10">Branding Design</button>
+  <button type="button" className="relative -ml-px inline-flex items-center rounded-r-xl bg-neutral-700/30 px-3 py-3 text-sm font-semibold text-gray-200 hover:bg-orange-500 focus:z-10">Graphic Design</button>
 </span>
 </div>
 
