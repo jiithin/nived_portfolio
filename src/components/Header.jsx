@@ -39,7 +39,7 @@ function Header() {
           {/* Blur background when dropdown is open */}
           <div
             className={`${
-              isOpen ? "fixed inset-0 bg-black bg-opacity-50 backdrop-blur-xl z-10" : ""
+              isOpen ? "fixed inset-0 bg-black bg-opacity-50 backdrop-blur-xl transition duration-500 z-10" : ""
             }`}
             onClick={() => setIsOpen(false)}
           ></div>
@@ -49,13 +49,13 @@ function Header() {
             } absolute top-full left-0 w-full md:static md:block md:w-auto z-20`}
             id="navbar-default"
           >
-            <ul className="flex flex-col p-4 md:p-0 mt-10 border border-transparent rounded-lg bg-transparent text-center md:flex-row md:space-x-16 rtl:space-x-reverse md:mt-0 md:border-0">
+            <ul className="flex flex-col p-4 md:p-0 mt-40 border border-transparent rounded-lg bg-transparent text-center md:flex-row md:space-x-16 rtl:space-x-reverse md:mt-0 md:border-0">
               <li>
               <Link
                   to="hero"
                   smooth={true}
                   duration={500}
-                  className="block py-3 px-3 text-gray-500 hover:text-orange-400 transition duration-500 font-semibold text-2xl md:text-xl rounded-sm md:p-0 cursor-pointer"
+                  className="block py-3 px-3 text-gray-500 hover:text-orange-400 transition duration-300 font-semibold text-2xl md:text-xl rounded-sm md:p-0 cursor-pointer"
                   onClick={() => setIsOpen(false)}
                 >
                   Home
