@@ -44,7 +44,7 @@ Explore!
   ></span>
   <span
     className="flex group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute top-2.5 left-6 z-10"
-    >Profile <IoIosArrowForward className='mt-1 animate-pulse delay-500 duration-300' /></span >
+    >Profile <IoIosArrowForward className='mt-1 animate-pulse delay-200 duration-100' /></span >
 </button></a>
 
       
