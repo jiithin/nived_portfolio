@@ -1,17 +1,35 @@
-import React from 'react'
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 
 function About() {
-// Animation variants for slide-up effect
-const slideUpVariants = {
-  hidden: { opacity: 0, y: 50 }, // Start below and invisible
-  visible: {
-    opacity: 1,
-    y: 0, // Slide up to its original position
-    transition: { duration: 0.8, ease: 'easeOut' },
-  },
-};
-  
+  const iconPaths = [
+    './figma.webp',
+    './xd.webp', 
+    './ps.webp', 
+    './illu.webp',
+    './pr.webp', 
+  ];
+
+  const targetValues = [100, 100, 100, 85, 75]; // Target progress values for each bar
+  const [progressValues, setProgressValues] = useState([0, 0, 0, 0, 0]); // Initial progress values
+
+  const handleInView = () => {
+    // Start animating progress values when the section is in view
+    const interval = setInterval(() => {
+      setProgressValues((prevValues) =>
+        prevValues.map((value, index) => {
+          if (value >= targetValues[index]) return targetValues[index]; // Stop at target value
+          return value + 1; // Increment progress
+        })
+      );
+    }, 25); // Adjust speed of animation
+
+    // Clear interval when all progress values reach their targets
+    setTimeout(() => clearInterval(interval), Math.max(...targetValues) * 200);
+  };
+
   return (
     <div
       className="font-Leto h-auto flex flex-col justify-center bg-neutral-900 lg:pt-20 pt-32 lg:px-20"
@@ -19,19 +37,20 @@ const slideUpVariants = {
     >
       <motion.p
         className="text-4xl font-semibold text-white text-center pb-4"
-        variants={slideUpVariants}
-        initial="hidden"
-        whileInView="visible"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
+        transition={{ duration: 0.5, ease: 'easeOut' }}
       >
         About Me
       </motion.p>
+
       <motion.p
         className="text-lg font-semibold text-neutral-400 text-center px-6 pb-2"
-        variants={slideUpVariants}
-        initial="hidden"
-        whileInView="visible"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
+        transition={{ duration: 0.5, ease: 'easeOut' }}
       >
         User Interface and User Experience and Also Graphic Designer & Freelancer
       </motion.p>
@@ -39,10 +58,10 @@ const slideUpVariants = {
       {/* Animated Section */}
       <motion.div
         className="flex flex-col md:flex-row items-center justify-center md:space-x-5 space-y-6 md:space-y-0 pb-10"
-        variants={slideUpVariants}
-        initial="hidden"
-        whileInView="visible"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
+        transition={{ duration: 0.5, ease: 'easeOut' }}
       >
         <img
           src="./nived1.webp"
@@ -74,134 +93,43 @@ const slideUpVariants = {
         </div>
       </motion.div>
 
-      {/* radial progressbar */}
-            <motion.div
+
+      <motion.div
         className="flex flex-wrap justify-evenly gap-12 py-4 px-6 mt-6"
-        variants={slideUpVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
+        onViewportEnter={handleInView} // Trigger animation when section is in view
       >
-  {/* Figma */}
-  <div className="flex flex-col justify-center items-center">
-    <div className="relative flex items-center justify-center h-auto ">
-      <svg width="90" height="90" viewBox="0 0 100 100" className="transform rotate-[-90deg] ">
-        <circle cx="50" cy="50" r="46" stroke="#3a3a3a" strokeWidth="8" fill="none" />
-        <circle
-          cx="50"
-          cy="50"
-          r="46"
-          stroke="currentColor"
-          strokeWidth="8"
-          fill="none"
-          strokeDasharray="289"
-          strokeDashoffset="0"
-          strokeLinecap="round"
-          className="text-orange-500 transition-all duration-500"
-        />
-      </svg>
-      <img src="./figma.webp" alt="" className="absolute w-8 h-8" />
-    </div>
-    <p className="text-orange-500 font-bold text-lg text-center">100%</p>
-    <p className="text-neutral-400 font-semibold text-xl text-center">Figma</p>
-  </div>
 
-  {/* Adobe XD */}
-  <div className="flex flex-col justify-center items-center">
-    <div className="relative flex items-center justify-center h-auto">
-      <svg width="90" height="90" viewBox="0 0 100 100" className="transform rotate-[-90deg] ">
-        <circle cx="50" cy="50" r="46" stroke="#3a3a3a" strokeWidth="8" fill="none" />
-        <circle
-          cx="50"
-          cy="50"
-          r="46"
-          stroke="currentColor"
-          strokeWidth="8"
-          fill="none"
-          strokeDasharray="289"
-          strokeDashoffset="0"
-          strokeLinecap="round"
-          className="text-orange-500 transition-all duration-500"
-        />
-      </svg>
-      <img src="./xd.webp" alt="" className="absolute w-8 h-8" />
+        {/* Progress Bars */}
+        {progressValues.map((progress, index) => (
+          <div key={index} className="flex flex-col justify-center items-center">
+            <div className="relative flex items-center justify-center h-[90px] w-[90px]">
+              <CircularProgressbar
+                value={progress} // Use animated progress value
+                strokeWidth={12}
+                styles={buildStyles({
+                  pathColor: `rgba(255, 102, 0, ${progress / 100})`,
+                  trailColor: '#3a3a3a',
+                  strokeLinecap: 'round',
+                })}
+              />
+              <img
+                src={iconPaths[index]}
+                alt={`Icon ${index + 1}`}
+                className="absolute w-8 h-8"
+              />
+            </div>
+            <p className="text-orange-500 font-bold text-lg text-center">{progress}%</p>
+            <p className="text-neutral-400 font-semibold text-xl text-center">
+              {['Figma', 'Adobe XD', 'Photoshop', 'Illustrator', 'Premiere'][index]}
+            </p>
+          </div>
+        ))}
+      </motion.div>
     </div>
-    <p className="text-orange-500 font-bold text-lg text-center">100%</p>
-    <p className="text-neutral-400 font-semibold text-xl text-center">Adobe XD</p>
-  </div>
-
-  {/* Adobe Photoshop */}
-  <div className="flex flex-col justify-center items-center">
-    <div className="relative flex items-center justify-center h-auto">
-      <svg width="90" height="90" viewBox="0 0 100 100" className="transform rotate-[-90deg]">
-        <circle cx="50" cy="50" r="46" stroke="#3a3a3a" strokeWidth="8" fill="none" />
-        <circle
-          cx="50"
-          cy="50"
-          r="46"
-          stroke="currentColor"
-          strokeWidth="8"
-          fill="none"
-          strokeDasharray="289"
-          strokeDashoffset="0"
-          strokeLinecap="round"
-          className="text-orange-500 transition-all duration-500"
-        />
-      </svg>
-      <img src="./ps.webp" alt="" className="absolute w-8 h-8" />
-    </div>
-    <p className="text-orange-500 font-bold text-lg text-center">100%</p>
-    <p className="text-neutral-400 font-semibold text-xl text-center">Photoshop</p>
-  </div>
-
-  {/* Adobe Illustrator */}
-  <div className="flex flex-col justify-center items-center">
-    <div className="relative flex items-center justify-center h-auto">
-      <svg width="90" height="90" viewBox="0 0 100 100" className="transform rotate-[-90deg]">
-        <circle cx="50" cy="50" r="46" stroke="#3a3a3a" strokeWidth="8" fill="none" />
-        <circle
-          cx="50" cy="50" r="46"
-          stroke="currentColor"
-          strokeWidth="8"
-          fill="none"
-          strokeDasharray="289"
-          strokeDashoffset="30"
-          strokeLinecap="round"
-          className="text-orange-500 transition-all duration-500"
-        />
-      </svg>
-      <img src="./illu.webp" alt="" className="absolute w-8 h-8" />
-    </div>
-    <p className="text-orange-500 font-bold text-lg text-center">85%</p>
-    <p className="text-neutral-400 font-semibold text-xl text-center">Illustrator</p>
-  </div>
-
-  {/* Adobe Premiere */}
-  <div className="flex flex-col justify-center items-center">
-    <div className="relative flex items-center justify-center h-auto">
-      <svg width="90" height="90" viewBox="0 0 100 100" className="transform rotate-[-90deg]">
-        <circle cx="50" cy="50" r="46" stroke="#3a3a3a" strokeWidth="8" fill="none" />
-        <circle
-          cx="50"
-          cy="50"
-          r="46"
-          stroke="currentColor"
-          strokeWidth="8"
-          fill="none"
-          strokeDasharray="289"
-          strokeDashoffset="70"
-          strokeLinecap="round"
-          className="text-orange-500 transition-all duration-500"
-        />
-      </svg>
-      <img src="./pr.webp" alt="" className="absolute w-8 h-8" />
-    </div>
-    <p className="text-orange-500 font-bold text-lg text-center">75%</p>
-    <p className="text-neutral-400 font-semibold text-xl text-center">Premiere</p>
-  </div>
-</motion.div>
-      </div>
-  )
+  );
 }
 
-export default About
+export default About;
