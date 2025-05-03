@@ -60,6 +60,13 @@ export const ProjectList = [
           demo_url: "https://www.behance.net/gallery/213892753/oil-and-gas-landing-page",
         },
         {
+          imge: "/realestate3.webp",
+          title: "Cordial Propertys Brochure",
+          type:"GRAPHIC WORK",
+          demo_url: "https://www.behance.net/gallery/208706903/Cordial-Propertys-Brochure",
+        },
+
+        {
           imge: "/realestate2.webp",
           title: "Real Estate Website",
           type:"BRANDING",
