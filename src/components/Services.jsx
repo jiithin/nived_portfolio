@@ -1,18 +1,36 @@
+import { motion } from 'framer-motion';
 import React from 'react'
 
 import { LuTabletSmartphone } from "react-icons/lu";
 import { LuMonitorSmartphone } from "react-icons/lu";
 import { PiPencilRuler } from "react-icons/pi";
-
+ 
 function Services() {
+  const slideUpVariants = {
+    hidden: { opacity: 0, y: 50 }, // Start below and invisible
+    visible: {
+      opacity: 1,
+      y: 0, // Slide up to its original position
+      transition: { duration: 0.8, ease: 'easeOut' },
+    },
+  };
+
+  
+
   return (
     <div className="font-Leto h-auto flex flex-col justify-center bg-neutral-900 lg:pt-20 pt-32 lg:px-16 md:px-10 px-8 z-10 backdrop-blur-3xl
     " id="services">
-      <h1 className="text-4xl font-semibold text-white text-center pb-5">Services</h1>
+      <motion.p className="text-4xl font-semibold text-white text-center pb-5" variants={slideUpVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}>Services</motion.p>
     
-      <div className='flex flex-col md:flex-row items-center justify-center md:space-x-10 space-y-6 md:space-y-0 '>
+      <motion.div className='flex flex-col md:flex-row items-center justify-center md:space-x-10 space-y-6 md:space-y-0 ' variants={slideUpVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}>
         <div
-          className="service-card w-full md:w-1/3 h-80 rounded-[30px] shadow-inner shadow-orange-500/10 ring-2 ring-orange-200/10 cursor-pointer py-8 px-6 bg-neutral-800/60 flex flex-col items-center gap-3 transition-all duration-300 group hover:bg-neutral-800/90 hover:shadow-orange-800/10 hover:shadow-lg"
+          className="service-card w-full md:w-1/3 h-80 rounded-[30px] shadow-inner shadow-orange-500/10 ring-2 ring-orange-200/10 cursor-pointer py-8 px-6 bg-neutral-800/60 flex flex-col items-center gap-3 transition-all duration-300 group hover:bg-neutral-800/90 hover:shadow-orange-800/10 hover:shadow-lg" 
         >
           <LuTabletSmartphone className=' text-orange-500 lg:w-20 lg:h-20 w-10 h-10'/>
           <p className="font-semibold text-2xl  text-orange-500">
@@ -24,7 +42,10 @@ function Services() {
         </div>
 
         <div
-          className="service-card w-full md:w-1/3 h-80 rounded-[30px] shadow-inner shadow-orange-500/10 ring-2 ring-orange-200/10  cursor-pointer py-8 px-6 bg-neutral-800/60 flex flex-col items-center gap-3 transition-all duration-300 group hover:bg-neutral-800/90 hover:shadow-orange-800/10 hover:shadow-lg"
+          className="service-card w-full md:w-1/3 h-80 rounded-[30px] shadow-inner shadow-orange-500/10 ring-2 ring-orange-200/10  cursor-pointer py-8 px-6 bg-neutral-800/60 flex flex-col items-center gap-3 transition-all duration-300 group hover:bg-neutral-800/90 hover:shadow-orange-800/10 hover:shadow-lg" variants={slideUpVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
         >
           <LuMonitorSmartphone className=' text-orange-500 lg:w-20 lg:h-20 w-10 h-10 '/>
           <p className="font-semibold text-2xl  text-orange-500">
@@ -36,7 +57,10 @@ function Services() {
         </div>
 
         <div
-          className="service-card w-full md:w-1/3 h-80 rounded-[30px] shadow-inner shadow-orange-500/10 ring-2 ring-orange-200/10  cursor-pointer py-8 px-6 bg-neutral-800/60 flex flex-col items-center gap-3 transition-all duration-300 group hover:bg-neutral-800/90 hover:shadow-orange-800/10 hover:shadow-lg"
+          className="service-card w-full md:w-1/3 h-80 rounded-[30px] shadow-inner shadow-orange-500/10 ring-2 ring-orange-200/10  cursor-pointer py-8 px-6 bg-neutral-800/60 flex flex-col items-center gap-3 transition-all duration-300 group hover:bg-neutral-800/90 hover:shadow-orange-800/10 hover:shadow-lg" variants={slideUpVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
         >
           <PiPencilRuler className='hover:bg-neutral-700/50 text-orange-500 lg:w-20 lg:h-20 w-10 h-10 '/>
           <p className="font-semibold text-2xl  text-orange-500 ">
@@ -46,7 +70,7 @@ function Services() {
           Creative professional who uses visual elements like images, colors, and typography to communicate ideas and messages
           </p>
         </div>
-      </div>
+      </motion.div>
     </div>
   )
 }

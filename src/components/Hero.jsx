@@ -1,10 +1,33 @@
 import React from "react";
-
+import { motion } from "framer-motion";
 
 import { BiSolidSend } from "react-icons/bi";
 
 import { BiLogoNetlify } from "react-icons/bi";
 function Hero() {
+
+  const blurToVisibleVariants = {
+    hidden: { opacity: 0,scale: 0.8, filter: "blur(20px)" }, // Start with blur and invisible
+    visible: {
+      opacity: 1,
+      scale: 1,
+      filter: "blur(0px)", // Transition to fully visible and no blur
+      transition: { duration: 1, ease: "easeOut" },
+    },
+  };
+
+
+
+  const bigToNormalVariants = {
+    hidden: { opacity: 0, scale: 1.5 }, // Start with blur and invisible
+    visible: {
+      opacity: 1,
+      scale: 1, // Transition to fully visible and no blur
+      transition: { duration: 0.75, ease: "easeOut" },
+    },
+  };
+
+
   let counts = setInterval(updated, 100); // Set interval to 100ms
   let upto = 30;
   
@@ -33,7 +56,9 @@ function Hero() {
       >
         
         {/* Text Section */}
-        <div className="flex flex-col z-10 justify-center items-start text-left md:w-2/3 mb-24 motion-scale-in-[0.5] motion-blur-in-[10px] motion-duration-[1.13s] motion-duration-[1.50s]/scale motion-duration-[0.75s]/blur motion-delay-[0.50s]/blur">
+        <motion.div className="flex flex-col z-10 justify-center items-start text-left md:w-2/3 mb-24 " variants={blurToVisibleVariants}
+        initial="hidden"
+        animate="visible">
           <p className="text-2xl font-bold text-gray-500 hover:translate-x-1 hover:scale-105 transition duration-500">Hi, I am</p>
           <p className="text-2xl text-gray-400 my-1 lg:my-2 font-bold hover:translate-x-1 hover:scale-105 transition duration-500">
             Nived MV
@@ -112,16 +137,18 @@ function Hero() {
             {/* Vertical Line */}
             <div className="w-[1px] h-20 bg-gray-500"></div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Image Section */}
-        <div className="flex flex-1 justify-center items-center md:w-1/3 z-10 ">
+        <motion.div className="flex flex-1 justify-center items-center md:w-1/3 z-10 " variants={bigToNormalVariants}
+        initial="hidden"
+        animate="visible">
           <img
-            className="max-w-[250px] md:max-w-[300px] lg:max-w-[550px] motion-preset-shrink motion-duration-2000"
+            className="max-w-[250px] md:max-w-[300px] lg:max-w-[550px] "
             src="./nived1.webp"
             alt="this supposed to be a picture"
           />
-        </div>
+        </motion.div>
       </div>
     </main>
   );

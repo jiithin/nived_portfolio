@@ -1,14 +1,31 @@
 import React from 'react'
+import { motion } from 'framer-motion';
+
 import { IoIosArrowForward } from "react-icons/io";
 
 function Other() {
+  const slideUpVariants = {
+    hidden: { opacity: 0, y: 50 }, // Start below and invisible
+    visible: {
+      opacity: 1,
+      y: 0, // Slide up to its original position
+      transition: { duration: 0.8, ease: 'easeOut' },
+    },
+  };
+
   return (
     <div className="font-Leto h-auto flex flex-col justify-center bg-neutral-900 lg:pt-20 pt-16 lg:px-20 pb-20 
     ">
-      <h1 className="text-4xl font-semibold text-white text-center pb-5">Check Out Other Works</h1>
+      <motion.p className="text-4xl font-semibold text-white text-center pb-5" variants={slideUpVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}>Check Out Other Works</motion.p>
 
       {/* card */}
-      <div className="flex flex-col items-center justify-center md:space-x-10 space-y-10 md:space-y-0 py-10 ">
+      <motion.div className="flex flex-col items-center justify-center md:space-x-10 space-y-10 md:space-y-0 py-10 " variants={slideUpVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}>
       
       
       <div className="flex justify-center items-center min-h-full bg-neutral-800 p-6 rounded-[50px] lg:my-10 md:my-10">
@@ -49,7 +66,7 @@ Explore!
 
       
       
-          </div>
+          </motion.div>
       </div>
   )
 }

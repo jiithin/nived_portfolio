@@ -1,11 +1,29 @@
 import React from 'react'
+import { motion } from 'framer-motion';
 
 function Contact() {
+
+   const slideUpVariants = {
+      hidden: { opacity: 0, y: 50 }, // Start below and invisible
+      visible: {
+        opacity: 1,
+        y: 0, // Slide up to its original position
+        transition: { duration: 0.8, ease: 'easeOut' },
+      },
+    };
+
   return (
     <div className="font-Leto h-auto flex flex-col justify-center items-center bg-neutral-900 lg:pt-20 pt-16 lg:px-20 pb-10 
-    " id="contact">
-      <p className="text-4xl font-semibold text-white text-center pb-5">Contact Me</p>
-      <p className='text-lg font-semibold text-neutral-400 text-center px-8'>Cultivating Connections: Reach Out and Connect with Me</p>
+    " id="contact" >
+=
+      <motion.p className="text-4xl font-semibold text-white text-center pb-5" variants={slideUpVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}>Contact Me</motion.p>
+      <motion.p className='text-lg font-semibold text-neutral-400 text-center px-8' variants={slideUpVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}>Cultivating Connections: Reach Out and Connect with Me</motion.p>
 
 
 

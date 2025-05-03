@@ -1,24 +1,68 @@
 import React from 'react'
-
+import { motion } from 'framer-motion';
 
 function About() {
-
+// Animation variants for slide-up effect
+const slideUpVariants = {
+  hidden: { opacity: 0, y: 50 }, // Start below and invisible
+  visible: {
+    opacity: 1,
+    y: 0, // Slide up to its original position
+    transition: { duration: 0.8, ease: 'easeOut' },
+  },
+};
   
   return (
-    <div className="font-Leto h-auto flex flex-col justify-center bg-neutral-900 lg:pt-20 pt-32 lg:px-20 
-    " id="about">
-      <p className="text-4xl font-semibold text-white text-center pb-4">About Me</p>
-      <p className='text-lg font-semibold text-neutral-400 text-center px-6 pb-2'>User Interface and User Experience and Also Graphic Designer & Freelancer</p>
-  
-      <div className='flex flex-col md:flex-row items-center justify-center md:space-x-5 space-y-6 md:space-y-0 pb-10 ' >
-        
-        <img src="./nived1.webp" alt="" className='flex flex-col items-center gap-3 h-auto px-8 w-2/3 md:w-[400px] lg:max-w-[400px] '/>
-        <div className='flex flex-col items-start gap-3'>
-        <p className=' lg:text-xl text-lg text-neutral-400 lg:tracking-tight md:tracking-tight align-middle leading-9 text-justify px-8'>Creative and detail-oriented Graphic Designer with over 1 years & 8 months of experience in creating visually compelling designs across various platforms. Proficient in Adobe Creative Suite (Photoshop, Illustrator, Premire Pro, After Effects & figma), with a strong understanding of typography, color theory, and design principles. Demonstrated ability to work collaboratively with cross-functional teams to deliver projects on time. Skilled in translating client needs and branding strategies into innovative and effective design solutions. Committed to staying current with industry trends and continuously improving design skills.</p>
+    <div
+      className="font-Leto h-auto flex flex-col justify-center bg-neutral-900 lg:pt-20 pt-32 lg:px-20"
+      id="about"
+    >
+      <motion.p
+        className="text-4xl font-semibold text-white text-center pb-4"
+        variants={slideUpVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        About Me
+      </motion.p>
+      <motion.p
+        className="text-lg font-semibold text-neutral-400 text-center px-6 pb-2"
+        variants={slideUpVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        User Interface and User Experience and Also Graphic Designer & Freelancer
+      </motion.p>
 
-        <div className="mt-6 px-8">
-        <a
-              className="bg-orange-500 text-white font-semibold py-2 px-10 rounded-md hover:bg-orange-600 transition duration-700 inline-block text-center "
+      {/* Animated Section */}
+      <motion.div
+        className="flex flex-col md:flex-row items-center justify-center md:space-x-5 space-y-6 md:space-y-0 pb-10"
+        variants={slideUpVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        <img
+          src="./nived1.webp"
+          alt=""
+          className="flex flex-col items-center gap-3 h-auto px-8 w-2/3 md:w-[400px] lg:max-w-[400px]"
+        />
+        <div className="flex flex-col items-start gap-3">
+          <p className="lg:text-xl text-lg text-neutral-400 lg:tracking-tight md:tracking-tight align-middle leading-9 text-justify px-8">
+            Creative and detail-oriented Graphic Designer with over 1 years & 8 months of experience
+            in creating visually compelling designs across various platforms. Proficient in Adobe
+            Creative Suite (Photoshop, Illustrator, Premiere Pro, After Effects & Figma), with a
+            strong understanding of typography, color theory, and design principles. Demonstrated
+            ability to work collaboratively with cross-functional teams to deliver projects on time.
+            Skilled in translating client needs and branding strategies into innovative and
+            effective design solutions. Committed to staying current with industry trends and
+            continuously improving design skills.
+          </p>
+          <div className="mt-6 px-8">
+            <a
+              className="bg-orange-500 text-white font-semibold py-2 px-10 rounded-md hover:bg-orange-600 transition duration-700 inline-block text-center"
               href="/NivedMV.pdf"
               download
               target="_blank"
@@ -26,13 +70,18 @@ function About() {
             >
               Download CV
             </a>
-
           </div>
-          </div>
-       </div>
+        </div>
+      </motion.div>
 
       {/* radial progressbar */}
-      <div className="flex flex-wrap justify-evenly gap-12 py-4 px-6 mt-6">
+            <motion.div
+        className="flex flex-wrap justify-evenly gap-12 py-4 px-6 mt-6"
+        variants={slideUpVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false }}
+      >
   {/* Figma */}
   <div className="flex flex-col justify-center items-center">
     <div className="relative flex items-center justify-center h-auto ">
@@ -150,7 +199,7 @@ function About() {
     <p className="text-orange-500 font-bold text-lg text-center">75%</p>
     <p className="text-neutral-400 font-semibold text-xl text-center">Premiere</p>
   </div>
-</div>
+</motion.div>
       </div>
   )
 }

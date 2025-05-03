@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 
 import { ProjectList } from "../data/Data.js";
+import { motion } from 'framer-motion';
 function Portfolio() {
 
   const [selectedType, setSelectedType] = useState("All"); // State to track selected type
@@ -11,12 +12,20 @@ function Portfolio() {
       ? ProjectList // Show all projects if "All" is selected
       : ProjectList.filter((project) => project.type === selectedType);
 
-    
+      const slideUpVariants = {
+        hidden: { opacity: 0, y: 50 }, // Start below and invisible
+        visible: {
+          opacity: 1,
+          y: 0, // Slide up to its original position
+          transition: { duration: 0.8, ease: 'easeOut' },
+        },
+      };
+  
 
   return (
     <div className="font-Leto h-auto flex flex-col justify-center bg-neutral-900 lg:pt-20 pt-32 lg:px-20 pb-20 
     " id="portfolio">
-      <h1 className="text-4xl font-semibold text-white text-center pb-5">Portfolio</h1>
+      <p className="text-4xl font-semibold text-white text-center pb-5" >Portfolio</p>
 
        {/* Buttons */}
        <div className="lg:flex md:flex items-center gap-2 bg-transparent justify-evenly py-4 lg:px-32 px-10 pb-16 pt-6 rounded-lg hidden">
@@ -79,14 +88,16 @@ function Portfolio() {
 
 {/* cards */}
 
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-8">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-8" >
 
 {filteredProjects.map((list, index) => (
-<div className="flex justify-center items-center min-h-full" key={index}>
+<div className="flex justify-center items-center min-h-full" key={index} >
     <div className="lg:max-w-[720px] h-auto mx-auto">
 
 
-        <div className="relative flex max-w-[24rem] flex-col overflow-hidden rounded-[40px] bg-neutral-800 bg-clip-border text-gray-700 shadow-md">
+        <motion.div className="relative flex max-w-[24rem] flex-col overflow-hidden rounded-[40px] bg-neutral-800 bg-clip-border text-gray-700 shadow-md" variants={slideUpVariants} initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}>
         <a href={list.demo_url} target="_blank" rel="noopener noreferrer" className="block">
             <div className="relative m-0 h-fit overflow-hidden text-gray-700 bg-transparent rounded-none shadow-none bg-clip-border">
                 <img
@@ -112,7 +123,7 @@ function Portfolio() {
                     {list.type}
                 </p>
             </div>
-        </div>
+        </motion.div>
     </div>
 </div>))}
 
