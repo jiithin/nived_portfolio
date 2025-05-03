@@ -80,7 +80,7 @@ const slideUpVariants = {
         variants={slideUpVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false }}
+        viewport={{ once: true }}
       >
   {/* Figma */}
   <div className="flex flex-col justify-center items-center">

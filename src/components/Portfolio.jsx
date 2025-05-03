@@ -25,10 +25,14 @@ function Portfolio() {
   return (
     <div className="font-Leto h-auto flex flex-col justify-center bg-neutral-900 lg:pt-20 pt-32 lg:px-20 pb-20 
     " id="portfolio">
-      <p className="text-4xl font-semibold text-white text-center pb-5" >Portfolio</p>
+      <motion.p className="text-4xl font-semibold text-white text-center py-2"  variants={slideUpVariants} initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}>Portfolio</motion.p>
 
        {/* Buttons */}
-       <div className="lg:flex md:flex items-center gap-2 bg-transparent justify-evenly py-4 lg:px-32 px-10 pb-16 pt-6 rounded-lg hidden">
+       <motion.div className="lg:flex md:flex items-center gap-2 bg-transparent justify-evenly py-4 lg:px-32 px-10 pb-16 pt-6 rounded-lg hidden" variants={slideUpVariants} initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}>
         <button
           onClick={() => setSelectedType("All")}
           className={`cursor-pointer bg-neutral-800 relative inline-flex items-center justify-center gap-2 text-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-orange-500 ${
@@ -61,11 +65,13 @@ function Portfolio() {
         >
           Graphic Design
         </button>
-      </div>
+      </motion.div>
 
 
 {/* buttons sm */}
-<div className="lg:hidden sm:hidden flex items-center justify-center  bg-transparent py-2  pb-10 rounded-lg">
+<motion.div className="lg:hidden sm:hidden flex items-center justify-center  bg-transparent py-2  pb-10 rounded-lg" variants={slideUpVariants} initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}>
     <span className="isolate inline-flex rounded-md shadow-sm">
   <button onClick={() => setSelectedType("All")} type="button" className={`relative inline-flex items-center rounded-l-xl bg-neutral-700/40 px-3 py-3 text-sm font-semibold text-gray-200  hover:bg-orange-500 focus:z-10 ${
             selectedType === "All" ? "bg-orange-500" : "text-gray-200"
@@ -83,7 +89,7 @@ function Portfolio() {
             selectedType === "GRAPHIC WORK" ? "bg-orange-500" : "text-gray-200"
           } relative -ml-px inline-flex items-center rounded-r-xl  px-3 py-3 text-sm font-semibold duration-500`}>Graphic Design</button>
 </span>
-</div>
+</motion.div>
 
 
 {/* cards */}
