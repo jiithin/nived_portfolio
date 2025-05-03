@@ -12,7 +12,7 @@ function Other() {
       
       
       <div className="flex justify-center items-center min-h-full bg-neutral-800 p-6 rounded-[50px] lg:my-10 md:my-10">
-          <div className="max-w-[720px] mx-auto">
+          <div className="max-w-[450px] mx-auto">
       
       
               <div className="relative flex max-w-full flex-col overflow-hidden rounded-[40px] bg-neutral-800 bg-clip-border text-gray-700 shadow-md">

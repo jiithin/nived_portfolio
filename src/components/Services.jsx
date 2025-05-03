@@ -6,7 +6,7 @@ import { PiPencilRuler } from "react-icons/pi";
 
 function Services() {
   return (
-    <div className="font-Leto h-auto flex flex-col justify-center bg-neutral-900 lg:pt-20 pt-32 lg:px-16 md:px-10 px-8
+    <div className="font-Leto h-auto flex flex-col justify-center bg-neutral-900 lg:pt-20 pt-32 lg:px-16 md:px-10 px-8 z-10 backdrop-blur-3xl
     " id="services">
       <h1 className="text-4xl font-semibold text-white text-center pb-5">Services</h1>
     

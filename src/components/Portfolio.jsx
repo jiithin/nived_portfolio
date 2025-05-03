@@ -1,15 +1,21 @@
 import React, { useState } from 'react'
-import { Button } from "flowbite-react";
-import { HiOutlineArrowRight, HiShoppingCart } from "react-icons/hi";
-import { Dropdown, DropdownItem } from "flowbite-react";
+
 import { ProjectList } from "../data/Data.js";
 function Portfolio() {
     const [activeButton, setActiveButton] = useState('All'); // Default active button
 
+    const getRandomProjects = (list, count) => {
+      const shuffled = [...list].sort(() => 0.5 - Math.random()); // Shuffle the array
+      return shuffled.slice(0, count); // Return the first `count` items
+    };
+  
+    const randomProjects = getRandomProjects(ProjectList, 3); // Get 3 random projects
+    
     const handleButtonClick = (buttonName) => {
       setActiveButton(buttonName); // Set the clicked button as active
     };
 
+    
 
   return (
     <div className="font-Leto h-auto flex flex-col justify-center bg-neutral-900 lg:pt-20 pt-32 lg:px-20 pb-20 
@@ -68,7 +74,7 @@ function Portfolio() {
 
 <div className="flex flex-col md:flex-row items-center justify-center md:space-x-10 space-y-10 md:space-y-0 px-8">
 
-{ProjectList.map((list, index) => (
+{randomProjects.map((list, index) => (
 <div className="flex justify-center items-center min-h-full" key={index}>
     <div className="lg:max-w-[720px] h-auto mx-auto">
 
