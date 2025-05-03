@@ -23,12 +23,12 @@ function Services() {
       <motion.p className="text-4xl font-semibold text-white text-center pb-5" variants={slideUpVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true }}>Services</motion.p>
+        viewport={{ once: true , amount: 0.2 }}>Services</motion.p>
     
       <motion.div className='flex flex-col md:flex-row items-center justify-center md:space-x-10 space-y-6 md:space-y-0 ' variants={slideUpVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}>
+          viewport={{ once: true , amount: 0.2 }}>
         <div
           className="service-card w-full md:w-1/3 h-80 rounded-[30px] shadow-inner shadow-orange-500/10 ring-2 ring-orange-200/10 cursor-pointer py-8 px-6 bg-neutral-800/60 flex flex-col items-center gap-3 transition-all duration-300 group hover:bg-neutral-800/90 hover:shadow-orange-800/10 hover:shadow-lg" 
         >
@@ -45,7 +45,7 @@ function Services() {
           className="service-card w-full md:w-1/3 h-80 rounded-[30px] shadow-inner shadow-orange-500/10 ring-2 ring-orange-200/10  cursor-pointer py-8 px-6 bg-neutral-800/60 flex flex-col items-center gap-3 transition-all duration-300 group hover:bg-neutral-800/90 hover:shadow-orange-800/10 hover:shadow-lg" variants={slideUpVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: true , amount: 0.2 }}
         >
           <LuMonitorSmartphone className=' text-orange-500 lg:w-20 lg:h-20 w-10 h-10 '/>
           <p className="font-semibold text-2xl  text-orange-500">
@@ -60,7 +60,7 @@ function Services() {
           className="service-card w-full md:w-1/3 h-80 rounded-[30px] shadow-inner shadow-orange-500/10 ring-2 ring-orange-200/10  cursor-pointer py-8 px-6 bg-neutral-800/60 flex flex-col items-center gap-3 transition-all duration-300 group hover:bg-neutral-800/90 hover:shadow-orange-800/10 hover:shadow-lg" variants={slideUpVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: true , amount: 0.2 }}
         >
           <PiPencilRuler className='hover:bg-neutral-700/50 text-orange-500 lg:w-20 lg:h-20 w-10 h-10 '/>
           <p className="font-semibold text-2xl  text-orange-500 ">
