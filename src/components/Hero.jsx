@@ -6,7 +6,7 @@ import { BiSolidSend } from "react-icons/bi";
 import { BiLogoNetlify } from "react-icons/bi";
 function Hero() {
   let counts = setInterval(updated, 100); // Set interval to 100ms
-  let upto = 40;
+  let upto = 30;
   
   function updated() {
     let count = document.getElementById("counter");
@@ -33,12 +33,12 @@ function Hero() {
       >
         
         {/* Text Section */}
-        <div className="flex flex-col z-10 justify-center items-start text-left md:w-2/3 mb-24 ">
+        <div className="flex flex-col z-10 justify-center items-start text-left md:w-2/3 mb-24 motion-scale-in-[0.5] motion-blur-in-[10px] motion-duration-[1.13s] motion-duration-[1.50s]/scale motion-duration-[0.75s]/blur motion-delay-[0.50s]/blur">
           <p className="text-2xl font-bold text-gray-500 hover:translate-x-1 hover:scale-105 transition duration-500">Hi, I am</p>
           <p className="text-2xl text-gray-400 my-1 lg:my-2 font-bold hover:translate-x-1 hover:scale-105 transition duration-500">
             Nived MV
           </p>
-          <p className="text-5xl text-orange-500 mt-2 lg:my-4 font-bold hover:translate-x-4 hover:scale-105 transition duration-500">
+          <p className="text-5xl text-orange-500 mt-2 lg:my-4 font-bold hover:translate-x-4 hover:scale-105 transition duration-500 ">
             UI/UX Designer & Graphic Designer
           </p>
           {/* Buttons Section */}
@@ -117,7 +117,7 @@ function Hero() {
         {/* Image Section */}
         <div className="flex flex-1 justify-center items-center md:w-1/3 z-10 ">
           <img
-            className="max-w-[250px] md:max-w-[300px] lg:max-w-[550px]"
+            className="max-w-[250px] md:max-w-[300px] lg:max-w-[550px] motion-preset-shrink motion-duration-2000"
             src="./nived1.webp"
             alt="this supposed to be a picture"
           />
