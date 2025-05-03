@@ -1,7 +1,7 @@
 export const ProjectList = [
     {
       imge: "/realestate.webp",
-      title: "REAL ESTATE WEBSITE",
+      title: "Real Estate Website",
       type:"UI&UX",
       demo_url: "https://www.behance.net/gallery/220856039/real-estate-website",
     },
@@ -49,7 +49,7 @@ export const ProjectList = [
         },
         {
           imge: "/admindash2.webp",
-          title: "Admin Dashboard2",
+          title: "Admin Dashboard",
           type:"UI&UX",
           demo_url: "https://www.behance.net/gallery/214691461/Admin-Dashboard",
         },
@@ -61,7 +61,7 @@ export const ProjectList = [
         },
         {
           imge: "/realestate2.webp",
-          title: "Real Estate App2",
+          title: "Real Estate Website",
           type:"BRANDING",
           demo_url: "",
         },

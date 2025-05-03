@@ -2,18 +2,14 @@ import React, { useState } from 'react'
 
 import { ProjectList } from "../data/Data.js";
 function Portfolio() {
-    const [activeButton, setActiveButton] = useState('All'); // Default active button
 
-    const getRandomProjects = (list, count) => {
-      const shuffled = [...list].sort(() => 0.5 - Math.random()); // Shuffle the array
-      return shuffled.slice(0, count); // Return the first `count` items
-    };
-  
-    const randomProjects = getRandomProjects(ProjectList, 3); // Get 3 random projects
-    
-    const handleButtonClick = (buttonName) => {
-      setActiveButton(buttonName); // Set the clicked button as active
-    };
+  const [selectedType, setSelectedType] = useState("All"); // State to track selected type
+
+  // Function to filter projects based on the selected type
+  const filteredProjects =
+    selectedType === "All"
+      ? ProjectList // Show all projects if "All" is selected
+      : ProjectList.filter((project) => project.type === selectedType);
 
     
 
@@ -22,59 +18,70 @@ function Portfolio() {
     " id="portfolio">
       <h1 className="text-4xl font-semibold text-white text-center pb-5">Portfolio</h1>
 
-      {/* buttons lg*/}
-<div className="lg:flex md:flex items-center gap-2 bg-transparent justify-evenly  py-4 lg:px-32 px-10 pb-16 pt-6 rounded-lg hidden">
-
-  <button
-    className="cursor-pointer bg-neutral-800 relative inline-flex items-center justify-center gap-2  text-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-orange-500 text-gray-300 hover:text-white lg:h-12 h-10 rounded-xl lg:px-8 px-4 duration-500"
-  >
-
-    All
-  </button>
-  <button
-    className="cursor-pointer bg-neutral-800 relative inline-flex items-center justify-center gap-2  text-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-orange-500 text-gray-300 hover:text-white lg:h-12 h-10 rounded-xl lg:px-8 px-4 duration-500"
-  >
-
-    UI&UX
-  </button>
-  <button
-    className="cursor-pointer bg-neutral-800 relative inline-flex items-center justify-center gap-2 rounded-xl text-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-orange-500 text-gray-300 hover:text-white lg:h-12 h-10  lg:px-8 px-4  duration-500"
-  >
-
-    Branding Design
-  </button>
-  <button
-    className="cursor-pointer bg-neutral-800 relative inline-flex items-center justify-center gap-2 rounded-xl text-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-orange-500 text-gray-300 hover:text-white lg:h-12 h-10 lg:px-8 px-4 duration-500"
-  >
-
-    Graphic Design
-  </button>
-</div>
+       {/* Buttons */}
+       <div className="lg:flex md:flex items-center gap-2 bg-transparent justify-evenly py-4 lg:px-32 px-10 pb-16 pt-6 rounded-lg hidden">
+        <button
+          onClick={() => setSelectedType("All")}
+          className={`cursor-pointer bg-neutral-800 relative inline-flex items-center justify-center gap-2 text-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-orange-500 ${
+            selectedType === "All" ? "bg-orange-500" : "text-gray-300"
+          } lg:h-12 h-10 rounded-xl lg:px-8 px-4 duration-500`}
+        >
+          All
+        </button>
+        <button
+          onClick={() => setSelectedType("UI&UX")}
+          className={`cursor-pointer bg-neutral-800 relative inline-flex items-center justify-center gap-2 text-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-orange-500 ${
+            selectedType === "UI&UX" ? "bg-orange-500" : "text-gray-300"
+          } lg:h-12 h-10 rounded-xl lg:px-8 px-4 duration-500`}
+        >
+          UI&UX
+        </button>
+        <button
+          onClick={() => setSelectedType("BRANDING")}
+          className={`cursor-pointer bg-neutral-800 relative inline-flex items-center justify-center gap-2 text-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-orange-500 ${
+            selectedType === "BRANDING" ? "bg-orange-500" : "text-gray-300"
+          } lg:h-12 h-10 rounded-xl lg:px-8 px-4 duration-500`}
+        >
+          Branding Design
+        </button>
+        <button
+          onClick={() => setSelectedType("GRAPHIC WORK")}
+          className={`cursor-pointer bg-neutral-800 relative inline-flex items-center justify-center gap-2 text-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-orange-500 ${
+            selectedType === "GRAPHIC WORK" ? "bg-orange-500" : "text-gray-300"
+          } lg:h-12 h-10 rounded-xl lg:px-8 px-4 duration-500`}
+        >
+          Graphic Design
+        </button>
+      </div>
 
 
 {/* buttons sm */}
 <div className="lg:hidden sm:hidden flex items-center justify-center  bg-transparent py-2  pb-10 rounded-lg">
     <span className="isolate inline-flex rounded-md shadow-sm">
-  {/* <button type="button" className="relative inline-flex items-center rounded-l-xl bg-neutral-700/40 px-3 py-3 text-sm font-semibold text-gray-200  hover:bg-orange-500 focus:z-10">All</button> */}
-  <button
-          type="button"
-          className={`relative inline-flex items-center rounded-l-xl px-3 py-3 text-sm font-semibold ${
-            activeButton === 'All' ? 'bg-orange-500 text-white' : 'bg-neutral-700/30 text-gray-200'
-          } hover:bg-orange-500 focus:z-10`}
-          onClick={() => handleButtonClick('All')}
-        >All</button>
-  <button type="button" className="relative -ml-px inline-flex items-center bg-neutral-700/30 px-3 py-3 text-sm font-semibold text-gray-200  hover:bg-orange-500 focus:z-10">UI&UX</button>
-  <button type="button" className="relative -ml-px inline-flex items-center bg-neutral-700/30 px-3 py-3 text-sm font-semibold text-gray-200  hover:bg-orange-500 focus:z-10">Branding Design</button>
-  <button type="button" className="relative -ml-px inline-flex items-center rounded-r-xl bg-neutral-700/30 px-3 py-3 text-sm font-semibold text-gray-200 hover:bg-orange-500 focus:z-10">Graphic Design</button>
+  <button onClick={() => setSelectedType("All")} type="button" className={`relative inline-flex items-center rounded-l-xl bg-neutral-700/40 px-3 py-3 text-sm font-semibold text-gray-200  hover:bg-orange-500 focus:z-10 ${
+            selectedType === "All" ? "bg-orange-500" : "text-gray-200"
+          } relative inline-flex items-center rounded-l-xl  px-3 py-3 text-sm font-semibold duration-500`}>All</button>
+
+  <button onClick={() => setSelectedType("UI&UX")} type="button" className={`relative -ml-px inline-flex items-center bg-neutral-700/30 px-3 py-3 text-sm font-semibold text-gray-200  hover:bg-orange-500 focus:z-10 ${
+            selectedType === "UI&UX" ? "bg-orange-500" : "text-gray-200"
+          } relative -ml-px inline-flex items-center px-3 py-3 text-sm font-semibold duration-500`}>UI&UX</button>
+
+<button onClick={() => setSelectedType("BRANDING")} type="button" className={`relative -ml-px inline-flex items-center bg-neutral-700/30 px-3 py-3 text-sm font-semibold text-gray-200  hover:bg-orange-500 focus:z-10 ${
+            selectedType === "BRANDING" ? "bg-orange-500" : "text-gray-200"
+          } relative -ml-px inline-flex items-center px-3 py-3 text-sm font-semibold duration-500`}>Branding Design</button>
+
+  <button onClick={() => setSelectedType("GRAPHIC WORK")} type="button" className={`relative -ml-px inline-flex items-center rounded-r-xl bg-neutral-700/30 px-3 py-3 text-sm font-semibold text-gray-200 hover:bg-orange-500 focus:z-10 ${
+            selectedType === "GRAPHIC WORK" ? "bg-orange-500" : "text-gray-200"
+          } relative -ml-px inline-flex items-center rounded-r-xl  px-3 py-3 text-sm font-semibold duration-500`}>Graphic Design</button>
 </span>
 </div>
 
 
 {/* cards */}
 
-<div className="flex flex-col md:flex-row items-center justify-center md:space-x-10 space-y-10 md:space-y-0 px-8">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-8">
 
-{randomProjects.map((list, index) => (
+{filteredProjects.map((list, index) => (
 <div className="flex justify-center items-center min-h-full" key={index}>
     <div className="lg:max-w-[720px] h-auto mx-auto">
 
@@ -98,7 +105,7 @@ function Portfolio() {
             <div className="flex items-center justify-between p-6">
                 <div className="flex items-center -space-x-3">
                 <p className="block font-sans text-sm antialiased font-semibold leading-snug tracking-normal text-neutral-300">
-                    Latest Project
+                {list.title}
                 </p>
                 </div>
                 <p className="block font-sans text-sm antialiased font-semibold leading-snug tracking-normal text-neutral-500">
