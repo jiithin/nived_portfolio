@@ -16,7 +16,7 @@ function Other() {
   return (
     <div className="font-Leto h-auto flex flex-col justify-center bg-neutral-900 lg:pt-20 pt-16 lg:px-20 pb-20 
     ">
-      <motion.p className="text-4xl font-semibold text-white text-center pb-5" variants={slideUpVariants}
+      <motion.p className="text-4xl font-semibold text-white text-center py-2" variants={slideUpVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}>Check Out Other Works</motion.p>
@@ -28,7 +28,7 @@ function Other() {
         viewport={{ once: true }}>
       
       
-      <div className="flex justify-center items-center min-h-full bg-neutral-800 p-6 rounded-[50px] lg:my-10 md:my-10">
+      <div className="flex justify-center items-center min-h-full bg-neutral-800 p-6 rounded-[50px] lg:mt-2 md:mt-2 lg:mb-10 md:mb-10">
           <div className="max-w-[450px] mx-auto">
       
       

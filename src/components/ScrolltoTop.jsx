@@ -10,7 +10,7 @@ function ScrollToTop() {
 
     useEffect(() => {
         const handleScroll = () => {
-            const scrollThreshold = 2000;
+            const scrollThreshold = 1000;
             setShouldRender(window.scrollY > scrollThreshold);
         };
 
