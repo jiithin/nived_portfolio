@@ -127,7 +127,7 @@ function Hero() {
           animate="visible"
         >
           <img
-            className="max-w-[250px] md:max-w-[300px] lg:max-w-[550px] "
+            className="h-fit w-fit "
             src="./f8e04cc8f8bce2af7825e8dea975dbcc251ec356.webp"
             alt="this supposed to be a picture"
           />

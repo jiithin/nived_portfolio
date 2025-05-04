@@ -64,7 +64,7 @@ function About() {
         <img
           src="./f8e04cc8f8bce2af7825e8dea975dbcc251ec356.webp"
           alt=""
-          className="flex flex-col items-center gap-3 h-auto px-8 w-2/3 md:w-[400px] lg:max-w-[400px]"
+          className="flex flex-col items-center gap-3 h-auto px-8 w-2/3"
         />
         <div className="flex flex-col items-start gap-3">
           <p className="lg:text-xl text-lg text-neutral-400 lg:tracking-tight md:tracking-tight align-middle leading-9 text-justify px-8">

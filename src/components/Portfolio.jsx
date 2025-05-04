@@ -76,57 +76,7 @@ function Portfolio() {
         </button>
       </motion.div>
 
-      <motion.div
-        className="lg:hidden sm:hidden flex items-center justify-center  bg-transparent py-2  pb-10 rounded-lg"
-        variants={slideUpVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-      >
-        <span className="isolate inline-flex rounded-md shadow-sm">
-          <button
-            onClick={() => setSelectedType("All")}
-            type="button"
-            className={`relative inline-flex items-center rounded-l-xl bg-neutral-700/40 px-3 py-3 text-sm font-semibold text-gray-200  hover:bg-orange-500 focus:z-10 ${
-              selectedType === "All" ? "bg-orange-500" : "text-gray-200"
-            } relative inline-flex items-center rounded-l-xl  px-3 py-3 text-sm font-semibold duration-500`}
-          >
-            All
-          </button>
-
-          <button
-            onClick={() => setSelectedType("UI&UX")}
-            type="button"
-            className={`relative -ml-px inline-flex items-center bg-neutral-700/30 px-3 py-3 text-sm font-semibold text-gray-200  hover:bg-orange-500 focus:z-10 ${
-              selectedType === "UI&UX" ? "bg-orange-500" : "text-gray-200"
-            } relative -ml-px inline-flex items-center px-3 py-3 text-sm font-semibold duration-500`}
-          >
-            UI&UX
-          </button>
-
-          <button
-            onClick={() => setSelectedType("BRANDING")}
-            type="button"
-            className={`relative -ml-px inline-flex items-center bg-neutral-700/30 px-3 py-3 text-sm font-semibold text-gray-200  hover:bg-orange-500 focus:z-10 ${
-              selectedType === "BRANDING" ? "bg-orange-500" : "text-gray-200"
-            } relative -ml-px inline-flex items-center px-3 py-3 text-sm font-semibold duration-500`}
-          >
-            Branding Design
-          </button>
-
-          <button
-            onClick={() => setSelectedType("GRAPHIC WORK")}
-            type="button"
-            className={`relative -ml-px inline-flex items-center rounded-r-xl bg-neutral-700/30 px-3 py-3 text-sm font-semibold text-gray-200 hover:bg-orange-500 focus:z-10 ${
-              selectedType === "GRAPHIC WORK"
-                ? "bg-orange-500"
-                : "text-gray-200"
-            } relative -ml-px inline-flex items-center rounded-r-xl  px-3 py-3 text-sm font-semibold duration-500`}
-          >
-            Graphic Design
-          </button>
-        </span>
-      </motion.div>
+      
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-8">
         {filteredProjects.map((list, index) => (
