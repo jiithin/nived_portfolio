@@ -36,7 +36,7 @@ function Header() {
               />
             </svg>
           </button>
-          {/* Blur background when dropdown is open */}
+
           <div
             className={`${
               isOpen ? "fixed inset-0 bg-black bg-opacity-50 backdrop-blur-xl transition duration-500 z-10" : ""

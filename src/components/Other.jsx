@@ -5,10 +5,10 @@ import { IoIosArrowForward } from "react-icons/io";
 
 function Other() {
   const slideUpVariants = {
-    hidden: { opacity: 0, y: 50 }, // Start below and invisible
+    hidden: { opacity: 0, y: 50 }, 
     visible: {
       opacity: 1,
-      y: 0, // Slide up to its original position
+      y: 0,
       transition: { duration: 0.8, ease: 'easeOut' },
     },
   };
@@ -21,7 +21,6 @@ function Other() {
         whileInView="visible"
         viewport={{ once: true }}>Check Out Other Works</motion.p>
 
-      {/* card */}
       <motion.div className="flex flex-col items-center justify-center md:space-x-10 space-y-10 md:space-y-0 py-10 " variants={slideUpVariants}
         initial="hidden"
         whileInView="visible"
@@ -36,7 +35,7 @@ function Other() {
               <a href="https://www.behance.net/nivednivuz" target="_blank" rel="noopener noreferrer" className="block">
                   <div className="relative m-0 h-full overflow-hidden text-gray-700 bg-transparent rounded-none shadow-none bg-clip-border">
                       <img
-                           src="./other.webp"
+                           src="./BX8kLQ5FfA9X1pmYuDaduzNaJF8v.webp"
                            alt="other" className='' />
                   </div>
                   </a>
@@ -44,7 +43,7 @@ function Other() {
           </div>
       </div>
 
-{/* button */}
+
 <a href="https://www.behance.net/nivednivuz" target="_blank" rel="noopener noreferrer">
 <button
   className="overflow-hidden  w-32 p-2 h-12 bg-orange-500 text-gray-200 border-none rounded-md text-xl font-bold cursor-pointer relative z-10 group" goto="https://www.behance.net/nivednivuz"

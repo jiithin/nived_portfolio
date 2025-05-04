@@ -4,10 +4,10 @@ import { motion } from 'framer-motion';
 function Contact() {
 
    const slideUpVariants = {
-      hidden: { opacity: 0, y: 50 }, // Start below and invisible
+      hidden: { opacity: 0, y: 50 }, 
       visible: {
         opacity: 1,
-        y: 0, // Slide up to its original position
+        y: 0, 
         transition: { duration: 0.8, ease: 'easeOut' },
       },
     };

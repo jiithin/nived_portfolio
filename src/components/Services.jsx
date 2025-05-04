@@ -7,10 +7,10 @@ import { PiPencilRuler } from "react-icons/pi";
 
 function Services() {
   const slideUpVariants = {
-    hidden: { opacity: 0, y: 50 }, // Start below and invisible
+    hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
-      y: 0, // Slide up to its original position
+      y: 0, 
       transition: { duration: 0.8, ease: 'easeOut' },
     },
   };
@@ -39,7 +39,7 @@ function Services() {
         whileInView="visible"
         viewport={{ once: true }}
       >
-        {/* App Design Card */}
+      
         <motion.div
           className="service-card w-full md:w-1/3 h-80 rounded-[30px] shadow-inner shadow-orange-500/10 ring-2 ring-orange-200/10 cursor-pointer py-8 px-6 bg-neutral-800/60 flex flex-col items-center gap-3 transition-all duration-300 group hover:bg-neutral-800/90 hover:shadow-orange-800/10 hover:shadow-lg"
           variants={slideUpVariants}
@@ -52,7 +52,7 @@ function Services() {
           </p>
         </motion.div>
 
-        {/* Web Design Card */}
+        
         <motion.div
           className="service-card w-full md:w-1/3 h-80 rounded-[30px] shadow-inner shadow-orange-500/10 ring-2 ring-orange-200/10 cursor-pointer py-8 px-6 bg-neutral-800/60 flex flex-col items-center gap-3 transition-all duration-300 group hover:bg-neutral-800/90 hover:shadow-orange-800/10 hover:shadow-lg"
           variants={slideUpVariants}
@@ -65,7 +65,7 @@ function Services() {
           </p>
         </motion.div>
 
-        {/* Graphic Design Card */}
+       
         <motion.div
           className="service-card w-full md:w-1/3 h-80 rounded-[30px] shadow-inner shadow-orange-500/10 ring-2 ring-orange-200/10 cursor-pointer py-8 px-6 bg-neutral-800/60 flex flex-col items-center gap-3 transition-all duration-300 group hover:bg-neutral-800/90 hover:shadow-orange-800/10 hover:shadow-lg"
           variants={slideUpVariants}

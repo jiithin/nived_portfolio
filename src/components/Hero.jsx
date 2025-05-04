@@ -7,11 +7,11 @@ import { BiLogoNetlify } from "react-icons/bi";
 function Hero() {
 
   const blurToVisibleVariants = {
-    hidden: { opacity: 0,scale: 0.8, filter: "blur(20px)" }, // Start with blur and invisible
+    hidden: { opacity: 0,scale: 0.8, filter: "blur(20px)" }, 
     visible: {
       opacity: 1,
       scale: 1,
-      filter: "blur(0px)", // Transition to fully visible and no blur
+      filter: "blur(0px)", 
       transition: { duration: 1, ease: "easeOut" },
     },
   };
@@ -19,16 +19,16 @@ function Hero() {
 
 
   const bigToNormalVariants = {
-    hidden: { opacity: 0, scale: 1.5 }, // Start with blur and invisible
+    hidden: { opacity: 0, scale: 1.5 }, 
     visible: {
       opacity: 1,
-      scale: 1, // Transition to fully visible and no blur
+      scale: 1, 
       transition: { duration: 0.75, ease: "easeOut" },
     },
   };
 
 
-  let counts = setInterval(updated, 100); // Set interval to 100ms
+  let counts = setInterval(updated, 100); 
   let upto = 30;
   
   function updated() {
@@ -55,7 +55,7 @@ function Hero() {
                    sm:max-w-full md:max-w-full lg:max-w-full xl:max-w-full z-10 backdrop-blur-3xl"
       >
         
-        {/* Text Section */}
+       
         <motion.div className="flex flex-col z-10 justify-center items-start text-left md:w-2/3 mb-24 " variants={blurToVisibleVariants}
         initial="hidden"
         animate="visible">
@@ -66,7 +66,7 @@ function Hero() {
           <p className="text-5xl text-orange-500 mt-2 lg:my-4 font-bold hover:translate-x-4 hover:scale-105 transition duration-500 ">
             UI/UX Designer & Graphic Designer
           </p>
-          {/* Buttons Section */}
+    
           <div className="flex pl-10 space-x-3 mt-4">
             <a
               className="bg-transparent"
@@ -89,7 +89,7 @@ function Hero() {
               />
             </a>
           </div>
-          {/* Download CV Button */}
+        
           <div className="mt-4 lg:mt-8 cursor-pointer group">
             <a
               type="button"
@@ -104,28 +104,20 @@ function Hero() {
               </span>
             </a>
 
-            {/* <a
-              className="bg-orange-500 text-white font-semibold py-2 px-10 rounded-md hover:bg-orange-700 transition inline-block text-center"
-              href="/NivedMV.pdf"
-              download
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Download CV
-            </a> */}
+       
           </div>
-          {/* New Div with 2 Lines, Vertical Line, and Another 2 Lines */}
+          
           <div className="flex items-center mt-10 space-x-6">
-            {/* First Two Lines */}
+           
             <div className="flex flex-col font-bold text-gray-300 text-lg lg:text-xl">
               <p className="text-orange-500 text-xl lg:text-2xl my-2">2+</p>
               <p>Years Experience</p>
             </div>
 
-            {/* Vertical Line */}
+           
             <div className="w-[1px] h-20 bg-gray-500"></div>
 
-            {/* Second Two Lines */}
+          
             <div className="flex flex-col font-bold text-gray-300 text-lg lg:text-xl">
               <p
                 className="text-orange-500 text-xl lg:text-2xl my-2"
@@ -134,18 +126,18 @@ function Hero() {
               <p>Projects Done</p>
             </div>
 
-            {/* Vertical Line */}
+           
             <div className="w-[1px] h-20 bg-gray-500"></div>
           </div>
         </motion.div>
 
-        {/* Image Section */}
+        
         <motion.div className="flex flex-1 justify-center items-center md:w-1/3 z-10 " variants={bigToNormalVariants}
         initial="hidden"
         animate="visible">
           <img
             className="max-w-[250px] md:max-w-[300px] lg:max-w-[550px] "
-            src="./nived1.webp"
+            src="./f8e04cc8f8bce2af7825e8dea975dbcc251ec356.webp"
             alt="this supposed to be a picture"
           />
         </motion.div>

@@ -12,21 +12,21 @@ function About() {
     './pr.webp', 
   ];
 
-  const targetValues = [100, 100, 100, 85, 75]; // Target progress values for each bar
-  const [progressValues, setProgressValues] = useState([0, 0, 0, 0, 0]); // Initial progress values
+  const targetValues = [100, 100, 100, 85, 75]; 
+  const [progressValues, setProgressValues] = useState([0, 0, 0, 0, 0]); 
 
   const handleInView = () => {
-    // Start animating progress values when the section is in view
+
     const interval = setInterval(() => {
       setProgressValues((prevValues) =>
         prevValues.map((value, index) => {
-          if (value >= targetValues[index]) return targetValues[index]; // Stop at target value
-          return value + 1; // Increment progress
+          if (value >= targetValues[index]) return targetValues[index];
+          return value + 1; 
         })
       );
-    }, 25); // Adjust speed of animation
+    }, 25); 
 
-    // Clear interval when all progress values reach their targets
+
     setTimeout(() => clearInterval(interval), Math.max(...targetValues) * 200);
   };
 
@@ -64,7 +64,7 @@ function About() {
         transition={{ duration: 0.5, ease: 'easeOut' }}
       >
         <img
-          src="./nived1.webp"
+          src="./f8e04cc8f8bce2af7825e8dea975dbcc251ec356.webp"
           alt=""
           className="flex flex-col items-center gap-3 h-auto px-8 w-2/3 md:w-[400px] lg:max-w-[400px]"
         />
@@ -99,15 +99,15 @@ function About() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        onViewportEnter={handleInView} // Trigger animation when section is in view
+        onViewportEnter={handleInView} 
       >
 
-        {/* Progress Bars */}
+  
         {progressValues.map((progress, index) => (
           <div key={index} className="flex flex-col justify-center items-center">
             <div className="relative flex items-center justify-center h-[90px] w-[90px]">
               <CircularProgressbar
-                value={progress} // Use animated progress value
+                value={progress} 
                 strokeWidth={12}
                 styles={buildStyles({
                   pathColor: `rgba(255, 102, 0, ${progress / 100})`,

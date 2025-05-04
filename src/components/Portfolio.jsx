@@ -4,19 +4,19 @@ import { ProjectList } from "../data/Data.js";
 import { motion } from 'framer-motion';
 function Portfolio() {
 
-  const [selectedType, setSelectedType] = useState("All"); // State to track selected type
+  const [selectedType, setSelectedType] = useState("All"); 
 
-  // Function to filter projects based on the selected type
+  
   const filteredProjects =
     selectedType === "All"
-      ? ProjectList // Show all projects if "All" is selected
+      ? ProjectList 
       : ProjectList.filter((project) => project.type === selectedType);
 
       const slideUpVariants = {
-        hidden: { opacity: 0, y: 50 }, // Start below and invisible
+        hidden: { opacity: 0, y: 50 }, 
         visible: {
           opacity: 1,
-          y: 0, // Slide up to its original position
+          y: 0, 
           transition: { duration: 0.8, ease: 'easeOut' },
         },
       };
@@ -29,7 +29,7 @@ function Portfolio() {
         whileInView="visible"
         viewport={{ once: true }}>Portfolio</motion.p>
 
-       {/* Buttons */}
+      
        <motion.div className="lg:flex md:flex items-center gap-2 bg-transparent justify-evenly py-4 lg:px-32 px-10 pb-16 pt-6 rounded-lg hidden" variants={slideUpVariants} initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}>
@@ -68,7 +68,7 @@ function Portfolio() {
       </motion.div>
 
 
-{/* buttons sm */}
+
 <motion.div className="lg:hidden sm:hidden flex items-center justify-center  bg-transparent py-2  pb-10 rounded-lg" variants={slideUpVariants} initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}>
@@ -92,7 +92,7 @@ function Portfolio() {
 </motion.div>
 
 
-{/* cards */}
+
 
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-8" >
 
@@ -111,14 +111,7 @@ function Portfolio() {
                      alt={list.title} />
             </div>
             </a>
-            {/* <div className="p-6">
-                <h4 className="block font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
-                    UI/UX Review Check
-                </h4>
-                <p className="block mt-3 font-sans text-xl antialiased font-normal leading-relaxed text-gray-700">
-                    Because it&apos;s about motivating the doers. Because I&apos;m here to follow my dreams and inspire others.
-                </p>
-            </div> */}
+    
             <div className="flex items-center justify-between p-6">
                 <div className="flex items-center -space-x-3">
                 <p className="block font-sans text-sm antialiased font-semibold leading-snug tracking-normal text-neutral-300">
