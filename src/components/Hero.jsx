@@ -36,10 +36,6 @@ function Hero() {
 
   return (
     <main className="bg-neutral-900 font-Lato " id="hero">
-      <div className="absolute top-2/4 lg:top-2/4 right-1/2 z-0 flex flex-row">
-        <BiLogoNetlify className="h-80 w-80 text-orange-500/30 " />
-        <BiLogoNetlify className="h-40 w-40 text-orange-500/30 hidden lg:inline" />
-      </div>
       <div
         id="home"
         className="h-auto flex flex-col-reverse md:flex-row items-center justify-between lg:px-20 px-8
@@ -52,13 +48,13 @@ function Hero() {
           initial="hidden"
           animate="visible"
         >
-          <p className="text-2xl font-bold text-gray-500 hover:translate-x-1 hover:scale-105 transition duration-500">
+          <p className="text-2xl font-bold text-gray-500 ">
             Hi, I am
           </p>
-          <p className="text-2xl text-gray-400 my-1 lg:my-2 font-bold hover:translate-x-1 hover:scale-105 transition duration-500">
+          <p className="text-2xl text-gray-400 my-1 lg:my-2 font-bold ">
             Nived MV
           </p>
-          <p className="text-5xl text-orange-500 mt-2 lg:my-4 font-bold hover:translate-x-4 hover:scale-105 transition duration-500 ">
+          <p className="text-5xl text-orange-500 mt-2 lg:my-4 font-bold  ">
             UI/UX Designer & Graphic Designer
           </p>
 
@@ -70,7 +66,7 @@ function Hero() {
               <img
                 src="./linkedin.webp"
                 alt="Button 1"
-                className="w-10 h-12 object-contain hover:-translate-y-1 transition duration-300"
+                className="w-10 h-12 object-contain "
               />
             </a>
             <a
@@ -80,7 +76,7 @@ function Hero() {
               <img
                 src="./behance.webp"
                 alt="Button 2"
-                className="w-10 h-12 object-contain hover:-translate-y-1 transition duration-300"
+                className="w-10 h-12 object-contain "
               />
             </a>
           </div>

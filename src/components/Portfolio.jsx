@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-import { ProjectList } from "../data/Data.js";
 import { motion } from "framer-motion";
 function Portfolio() {
   const [selectedType, setSelectedType] = useState("All");
