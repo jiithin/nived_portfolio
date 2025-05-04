@@ -7,7 +7,6 @@ import Portfolio from '../components/Portfolio'
 import Other from '../components/Other'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
-import ScrolltoTop from '../components/ScrolltoTop'
 
 function Home() {
   return (
@@ -21,7 +20,6 @@ function Home() {
         <Other/>
         <Contact/>
         <Footer/>
-        <ScrolltoTop/>
   </>
   )
 }

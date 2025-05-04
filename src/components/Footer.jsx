@@ -1,12 +1,12 @@
-import React from 'react'
+import React from "react";
 import { FiPhone } from "react-icons/fi";
 import { MdOutlineEmail } from "react-icons/md";
 
 function Footer() {
   return (
-<footer className="bg-gradient-to-b from-neutral-900 via-neutral-900 to-neutral-900">
-  <div className="flex flex-col justify-cente items-center max-w-screen-xl px-4 mx-auto  lg:px-8">
-    {/* <div className="flex flex-col gap-2 justify-center items-center">
+    <footer className="bg-gradient-to-b from-neutral-900 via-neutral-900 to-neutral-900">
+      <div className="flex flex-col justify-cente items-center max-w-screen-xl px-4 mx-auto  lg:px-8">
+        {/* <div className="flex flex-col gap-2 justify-center items-center">
 
 
         <div className="flex mt-4 space-x-6 text-gray-500">
@@ -55,13 +55,13 @@ function Footer() {
         
         </div>
     </div> */}
-    <div className='w-4/5 h-[1px] flex justify-center items-center bg-neutral-800'></div>
-    <p className="mt-4 lg:text-md text-sm text-neutral-700 mb-6">
-      Designed by Nived
-    </p>
-  </div>
-</footer>
-  )
+        <div className="w-4/5 h-[1px] flex justify-center items-center bg-neutral-800"></div>
+        <p className="mt-4 lg:text-md text-sm text-neutral-700 mb-6">
+          Designed by Nived
+        </p>
+      </div>
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;

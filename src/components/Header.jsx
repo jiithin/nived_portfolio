@@ -39,7 +39,9 @@ function Header() {
 
           <div
             className={`${
-              isOpen ? "fixed inset-0 bg-black bg-opacity-50 backdrop-blur-xl transition duration-500 z-10" : ""
+              isOpen
+                ? "fixed inset-0 bg-black bg-opacity-50 backdrop-blur-xl transition duration-500 z-10"
+                : ""
             }`}
             onClick={() => setIsOpen(false)}
           ></div>
@@ -51,7 +53,7 @@ function Header() {
           >
             <ul className="flex flex-col p-4 md:p-0 mt-40 border border-transparent rounded-lg bg-transparent text-center md:flex-row md:space-x-16 rtl:space-x-reverse md:mt-0 md:border-0">
               <li>
-              <Link
+                <Link
                   to="hero"
                   smooth={true}
                   duration={500}
@@ -62,7 +64,7 @@ function Header() {
                 </Link>
               </li>
               <li>
-              <Link
+                <Link
                   to="services"
                   smooth={true}
                   duration={500}
@@ -73,7 +75,7 @@ function Header() {
                 </Link>
               </li>
               <li>
-              <Link
+                <Link
                   to="about"
                   smooth={true}
                   duration={500}
@@ -84,7 +86,7 @@ function Header() {
                 </Link>
               </li>
               <li>
-              <Link
+                <Link
                   to="portfolio"
                   smooth={true}
                   duration={500}
@@ -95,7 +97,7 @@ function Header() {
                 </Link>
               </li>
               <li>
-              <Link
+                <Link
                   to="contact"
                   smooth={true}
                   duration={500}

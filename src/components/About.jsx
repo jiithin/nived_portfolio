@@ -1,31 +1,29 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
-import 'react-circular-progressbar/dist/styles.css';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css";
 
 function About() {
   const iconPaths = [
-    './figma.webp',
-    './xd.webp', 
-    './ps.webp', 
-    './illu.webp',
-    './pr.webp', 
+    "./figma.webp",
+    "./xd.webp",
+    "./ps.webp",
+    "./illu.webp",
+    "./pr.webp",
   ];
 
-  const targetValues = [100, 100, 100, 85, 75]; 
-  const [progressValues, setProgressValues] = useState([0, 0, 0, 0, 0]); 
+  const targetValues = [100, 100, 100, 85, 75];
+  const [progressValues, setProgressValues] = useState([0, 0, 0, 0, 0]);
 
   const handleInView = () => {
-
     const interval = setInterval(() => {
       setProgressValues((prevValues) =>
         prevValues.map((value, index) => {
           if (value >= targetValues[index]) return targetValues[index];
-          return value + 1; 
+          return value + 1;
         })
       );
-    }, 25); 
-
+    }, 25);
 
     setTimeout(() => clearInterval(interval), Math.max(...targetValues) * 200);
   };
@@ -40,7 +38,7 @@ function About() {
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.5, ease: 'easeOut' }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
       >
         About Me
       </motion.p>
@@ -50,18 +48,18 @@ function About() {
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.5, ease: 'easeOut' }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
       >
-        User Interface and User Experience and Also Graphic Designer & Freelancer
+        User Interface and User Experience and Also Graphic Designer &
+        Freelancer
       </motion.p>
 
-      {/* Animated Section */}
       <motion.div
         className="flex flex-col md:flex-row items-center justify-center md:space-x-5 space-y-6 md:space-y-0 pb-10"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.5, ease: 'easeOut' }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
       >
         <img
           src="./f8e04cc8f8bce2af7825e8dea975dbcc251ec356.webp"
@@ -70,13 +68,15 @@ function About() {
         />
         <div className="flex flex-col items-start gap-3">
           <p className="lg:text-xl text-lg text-neutral-400 lg:tracking-tight md:tracking-tight align-middle leading-9 text-justify px-8">
-            Creative and detail-oriented Graphic Designer with over 1 years & 8 months of experience
-            in creating visually compelling designs across various platforms. Proficient in Adobe
-            Creative Suite (Photoshop, Illustrator, Premiere Pro, After Effects & Figma), with a
-            strong understanding of typography, color theory, and design principles. Demonstrated
-            ability to work collaboratively with cross-functional teams to deliver projects on time.
-            Skilled in translating client needs and branding strategies into innovative and
-            effective design solutions. Committed to staying current with industry trends and
+            Creative and detail-oriented Graphic Designer with over 1 years & 8
+            months of experience in creating visually compelling designs across
+            various platforms. Proficient in Adobe Creative Suite (Photoshop,
+            Illustrator, Premiere Pro, After Effects & Figma), with a strong
+            understanding of typography, color theory, and design principles.
+            Demonstrated ability to work collaboratively with cross-functional
+            teams to deliver projects on time. Skilled in translating client
+            needs and branding strategies into innovative and effective design
+            solutions. Committed to staying current with industry trends and
             continuously improving design skills.
           </p>
           <div className="mt-6 px-8">
@@ -93,26 +93,26 @@ function About() {
         </div>
       </motion.div>
 
-
       <motion.div
         className="flex flex-wrap justify-evenly gap-12 py-4 px-6 mt-6"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        onViewportEnter={handleInView} 
+        onViewportEnter={handleInView}
       >
-
-  
         {progressValues.map((progress, index) => (
-          <div key={index} className="flex flex-col justify-center items-center">
+          <div
+            key={index}
+            className="flex flex-col justify-center items-center"
+          >
             <div className="relative flex items-center justify-center h-[90px] w-[90px]">
               <CircularProgressbar
-                value={progress} 
+                value={progress}
                 strokeWidth={12}
                 styles={buildStyles({
                   pathColor: `rgba(255, 102, 0, ${progress / 100})`,
-                  trailColor: '#3a3a3a',
-                  strokeLinecap: 'round',
+                  trailColor: "#3a3a3a",
+                  strokeLinecap: "round",
                 })}
               />
               <img
@@ -121,9 +121,15 @@ function About() {
                 className="absolute w-8 h-8"
               />
             </div>
-            <p className="text-orange-500 font-bold text-lg text-center">{progress}%</p>
+            <p className="text-orange-500 font-bold text-lg text-center">
+              {progress}%
+            </p>
             <p className="text-neutral-400 font-semibold text-xl text-center">
-              {['Figma', 'Adobe XD', 'Photoshop', 'Illustrator', 'Premiere'][index]}
+              {
+                ["Figma", "Adobe XD", "Photoshop", "Illustrator", "Premiere"][
+                  index
+                ]
+              }
             </p>
           </div>
         ))}
